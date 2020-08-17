@@ -3,7 +3,7 @@
 {{ $cssDevOpts   := (dict "enableSourceMaps" true "includePaths" (slice "node_modules")) }}
 {{ $cssProdOpts  := (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
 {{ $cssOpts      := cond $serverMode $cssDevOpts $cssProdOpts }}
-{{ $css          := resources.Get $scss | toCSS $cssOpts | minify }}
+{{ $css          := resources.Get $scss | toCSS $cssOpts }}
 {{ if $serverMode }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ else }}

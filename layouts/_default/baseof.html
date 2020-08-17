@@ -11,12 +11,8 @@
 </head>
 
 <body>
-    <main class="main" aria-role="main">
-        {{ block "main" . }}
-        {{ end }}
-    </main>
-
-    {{ partial "footer.html" . }}
+    {{ block "main" . }}
+    {{ end }}
     {{ partial "javascript.html" . }}
 </body>
 

@@ -8,9 +8,7 @@ description = "Hub CLI is an interface to SuperHub."
 agilestacks_docs_url = "https://docs.agilestacks.com"
 github_repo_url      = "agilestacks/hub"
 slack_support_url    = "https://agilestacks-support.slack.com"
-
 hub_windows_bin_url = "https://controlplane.agilestacks.io/dist/hub-cli/hub.windows_amd64.exe"
-
 
 title = "SuperHub® Automation Hub"
 brief = "Trust the complete automation hub delivering composable stacks with speed, security, and reliability. Out-of-the-box curation and composition of your software services has never been easier."

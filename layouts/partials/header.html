@@ -1,0 +1,33 @@
+{{ $title                := .Param "title" }}
+{{ $brief                := .Param "brief" }}
+{{ $agilestacks_docs_url := .Param "agilestacks_docs_url" }}
+{{ $github_repo_url      := .Param "github_repo_url" }}
+{{ $slack_support_url    := .Param "slack_support_url" }}
+<header class="header">
+    <div class="container ">
+        <div class="columns is-centered is-vcentered is-mobile">
+            <div class="column is-one-third is-narrow has-text-centered">
+                <figure class="image">
+                    <img class="logo" src="/images/logo.png" />
+                </figure>
+            </div>
+            <div class="column">
+                <div>
+                    <p class="title is-2">{{ $title }}</p>
+                    <p class="subtitle is-4">{{ $brief }}</p>
+                </div>
+                <div class="buttons">
+                    <a href="{{ $agilestacks_docs_url }}" target="_blank" class="button">
+                        Docs
+                    </a>
+                    <a href="{{ $slack_support_url }}" target="_blank" class="button">
+                        <i class="fab fa-slack"></i>
+                    </a>
+                    <a href="https://github.com/{{ $github_repo_url }}" target="_blank" class="button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
