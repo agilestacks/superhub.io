@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ $title := .Param "title" }}
+{{ $brief := .Param "brief" }}
+
+{{ $agilestacks_docs_url := .Param "agilestacks_docs_url" }}
+{{ $github_repo_url      := .Param "github_repo_url" }}
+{{ $slack_support_url    := .Param "slack_support_url" }}
+
+<div class="wrapper">
+    <div class="box sidebar">
+        <img class="logo" src="/images/logo.png" />
+    </div>
+    <div class="box header">
+        <div>
+            <h1>{{ $title }}</h1>
+            <h2>{{ $brief }}</h2>
+        </div>
+        <div class="buttons">
+            <a href="{{ $agilestacks_docs_url }}" target="_blank" class="button">Docs</a>
+            <a href="{{ $slack_support_url }}" target="_blank" class="button"><i class="fab fa-slack"></i></a>
+            <a href="https://github.com/{{ $github_repo_url }}" target="_blank" class="button"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    {{ partial "gettingstart.html" . }}
+</div>
+{{ end }}

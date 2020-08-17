@@ -1,0 +1,35 @@
+<div class="box content">
+    <h1>Getting Started</h1>
+    <div class="tabs">
+        <div class="tab">
+            <input id="macos" type="radio" name="tab-group-1" checked />
+            <label for="macos"><i class="fab fa-apple"></i>&nbsp;MacOS</label>
+
+            <div class="tab-content">
+                <textarea id="macos" class="os-instruction"></textarea>
+                <button class="button clipboard" onclick="onCopy('macos')">
+                    <i class="far fa-clipboard"></i>
+                </button>
+                <pre id="macos-instruction">{{ partial "install/macos.html" . }}</pre>
+            </div>
+        </div>
+        <div class="tab">
+            <input id="linux" type="radio" name="tab-group-1" />
+            <label for="linux"><i class="fab fa-linux"></i>&nbsp;Linux</label>
+
+            <div class="tab-content">
+                <textarea id="linux" class="os-instruction"></textarea>
+                <button class="button clipboard" onclick="onCopy('linux')">
+                    <i class="far fa-clipboard"></i>
+                </button>
+                <pre id="linux-instruction">{{ partial "install/linux.html" . }}</pre>
+            </div>
+        </div>
+        <div class="tab">
+            <input id="windows" type="radio" name="tab-group-1" />
+            <label for="windows"><i class="fab fa-windows"></i>&nbsp;Windows</label>
+
+            <div class="tab-content">{{ partial "install/windows.html" . }}</div>
+        </div>
+    </div>
+</div>

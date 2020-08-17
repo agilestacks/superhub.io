@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+@import "bulma/sass/utilities/all";
+@import 'bulma/sass/elements/button';
+
+@import './fa/fontawesome.scss';
+@import './fa/brands.scss';
+@import './fa/regular.scss';
+
+@font-face {
+    font-family: "JetBrainsMono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: "block";
+    src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+body {
+    background-image: url("/images/background.svg");
+    background-size: cover;
+    color: #fff;
+    font-family: "JetBrainsMono", sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    margin: 40px 80px;
+}
+
+pre {
+    font-family: "JetBrainsMono", sans-serif;
+}
+
+a.button {
+    text-decoration: none
+}
+
+.sidebar {
+    grid-area: sidebar;
+
+    img {
+        height: 250px;
+    }
+}
+
+.content {
+    grid-area: content;
+    position: relative;
+
+    .tabs {
+        clear: both;
+        margin: 25px 0;
+        min-height: 200px; /* This part sucks */
+        position: relative;
+    }
+
+    .tab {
+        float: left;
+    }
+
+    .tab label {
+        background: #eee;
+        border: 1px solid #ccc;
+        color: #000;
+        left: 1px;
+        margin-left: -1px;
+        padding: 10px;
+        position: relative;
+    }
+
+    .tab [type="radio"] {
+        display: none;
+    }
+
+    .tab-content {
+        background: #fff;
+        border: 1px solid #ccc;
+        bottom: 0;
+        color: #000;
+        left: 0;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        top: 25px;
+    }
+
+    [type="radio"]:checked ~ label {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+        z-index: 2;
+    }
+
+    [type="radio"]:checked ~ label ~ .tab-content {
+        z-index: 1;
+    }
+
+    .os-instruction {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .clipboard {
+        position: absolute;
+        left: 90%;
+    }
+}
+
+.header {
+    grid-area: header;
+
+    .buttons {
+        display: flex;
+
+        * > {
+            margin-right: 5px;
+        }
+    }
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "sidebar  header  header"
+        "content content content"
+        "footer  footer  footer";
+}
+
+.box {
+    padding: 25px;
+}
