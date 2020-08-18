@@ -1,7 +1,7 @@
 function onCopy(os) {
     const pre = document.querySelector(`pre#${os}-instruction`);
     const input = document.querySelector(`textarea#${os}`);
-    input.value = pre.innerHTML;
+    input.value = pre.innerHTML.trim();
     input.select();
     document.execCommand('copy');
     input.setSelectionRange(0, 0)

@@ -83,11 +83,27 @@ a.button {
     }
 
     .tab-content.is-active {
-        display: block;
+        display: flex;
+        
+        > div {
+            margin-left: 5em;
+        }
+
+        div:first-child {
+            margin-left: 0;
+        }
     }
 
     .tab-content {
-        position: relative;
+        .instruction {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            // pre {
+            //     min-height: 160px;
+            // }
+        }
 
         textarea {
             position: absolute;
@@ -97,7 +113,7 @@ a.button {
         .clipboard {
             position: absolute;
             left: 92%;
-            top: 20%;
+            top: 25%;
         }
     }
 }
