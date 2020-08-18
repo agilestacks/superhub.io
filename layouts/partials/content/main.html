@@ -34,20 +34,20 @@
             <div class="box tabs-content">
                 <section class="tab-content">
                     <textarea id="macos"></textarea>
-                    <pre id="macos-instruction">{{ partial "install/macos.html" . }}</pre>
+                    <pre id="macos-instruction">{{ partial "content/install/macos.html" . }}</pre>
                     <button class="button clipboard" onclick="onCopy('macos')">
                         <i class="far fa-clipboard"></i>
                     </button>
                 </section>
                 <section class="tab-content">
                     <textarea id="linux"></textarea>
-                    <pre id="linux-instruction">{{ partial "install/linux.html" . }}</pre>
+                    <pre id="linux-instruction">{{ partial "content/install/linux.html" . }}</pre>
                     <button class="button clipboard" onclick="onCopy('linux')">
                         <i class="far fa-clipboard"></i>
                     </button>
                 </section>
                 <section class="tab-content">
-                    {{ partial "install/windows.html" . }}
+                    {{ partial "content/install/windows.html" . }}
                 </section>
             </div>
         </div>

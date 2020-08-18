@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    {{ partial "meta.html" . }}
+    {{ partial "structure/meta.html" . }}
     <title>
         {{ block "title" . }}{{ site.Title }}{{ end }}
     </title>
-    {{ partial "favicon.html" . }}
-    {{ partial "css.html" . }}
+    {{ partial "structure/favicon.html" . }}
+    {{ partial "structure/css.html" . }}
 </head>
 
 <body>
     {{ block "main" . }}
     {{ end }}
-    {{ partial "javascript.html" . }}
+    {{ partial "structure/javascript.html" . }}
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 {{ $title                := .Param "title" }}
-{{ $brief                := .Param "brief" }}
+{{ $description          := .Param "description" }}
+{{ $agilestacks_url      := .Param "agilestacks_url" }}
 {{ $agilestacks_docs_url := .Param "agilestacks_docs_url" }}
 {{ $github_repo_url      := .Param "github_repo_url" }}
 {{ $slack_support_url    := .Param "slack_support_url" }}
@@ -15,7 +16,7 @@
             <div class="column">
                 <div>
                     <p class="title is-2">{{ $title }}</p>
-                    <p class="subtitle is-4">{{ $brief }}</p>
+                    <p class="subtitle is-4">{{ $description }}</p>
                 </div>
                 <div class="buttons">
                     <a href="{{ $agilestacks_docs_url }}" target="_blank" class="button">
