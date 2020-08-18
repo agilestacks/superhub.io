@@ -28,6 +28,7 @@ $fa-font-path: "{{ $faFontsPath }}" !default;
 @import "./fa/fontawesome.scss";
 @import "./fa/brands.scss";
 @import "./fa/regular.scss";
+@import "./fa/solid.scss";
 
 body {
     background-image: url("{{ $background }}");
