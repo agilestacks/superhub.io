@@ -13,7 +13,7 @@ build:
 	hugo --minify
 
 publish: clean prepare build
-	cd public
-	git add --all
-	git commit -m "Publishing to gh-pages"
+	cd public && \
+	git add --all && \
+	git commit -m "Publishing to gh-pages" && \
 	git push --all

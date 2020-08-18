@@ -3,12 +3,13 @@
 {{ $agilestacks_docs_url := .Param "agilestacks_docs_url" }}
 {{ $github_repo_url      := .Param "github_repo_url" }}
 {{ $slack_support_url    := .Param "slack_support_url" }}
+{{ $logo := "images/logo.png" | absURL }}
 <header class="header">
     <div class="container ">
         <div class="columns is-centered is-vcentered is-mobile">
             <div class="column is-one-third is-narrow has-text-centered">
                 <figure class="image">
-                    <img class="logo" src="/images/logo.png" />
+                    <img class="logo" src="{{ $logo }}" />
                 </figure>
             </div>
             <div class="column">

@@ -1,12 +1,13 @@
 {{ $serverMode   := site.IsServer }}
 {{ $scss         := "style/style.scss" }}
+{{ $scssTemplate := resources.Get $scss }}
 {{ $cssDevOpts   := (dict "enableSourceMaps" true "includePaths" (slice "node_modules")) }}
 {{ $cssProdOpts  := (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
 {{ $cssOpts      := cond $serverMode $cssDevOpts $cssProdOpts }}
-{{ $css          := resources.Get $scss | toCSS $cssOpts }}
+{{ $css          := $scssTemplate | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
 {{ if $serverMode }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="{{ $css.RelPermalink | absURL }}">
 {{ else }}
 {{ $prodCss      := $css | fingerprint }}
-<link rel="stylesheet" href="{{ $prodCss.RelPermalink }}" integrity="{{ $prodCss.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $prodCss.RelPermalink | absURL }}" integrity="{{ $prodCss.Data.Integrity }}">
 {{ end }}
