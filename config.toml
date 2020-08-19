@@ -1,4 +1,4 @@
-baseURL = "https://agilestacks.github.io/superhub.io/"
+baseURL = "https://superhub.io"
 languageCode = "en-us"
 title = "SuperHub"
 disableKinds = ["taxonomy", "taxonomyTerm"]
