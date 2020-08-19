@@ -1,8 +1,8 @@
 <main class="main">
-    <div class="container">
+    <div class="container is-fluid">
         <h1 class="title">Getting Started</h1>
         <div class="tabs-with-content">
-            <div class="tabs is-toggle">
+            <div class="tabs is-small is-toggle">
                 <ul>
                     <li id="macos">
                         <a>
@@ -33,48 +33,56 @@
 
             <div class="box tabs-content">
                 <section class="tab-content">
-                    <div class="instruction">
-                        <p class="subtitle has-text-black">
-                            <span>Bash</span>
-                            <button class="button is-small" onclick="onCopy('macos-bash')">
-                                <span class="icon">
-                                    <i class="fas fa-clipboard"></i>
-                                </span>
-                            </button>
-                        </p>
-                        <textarea id="macos-bash"></textarea>
-                        <pre id="macos-bash-instruction">{{ partial "content/install/macos-bash.html" . }}</pre>
-                    </div>
-                    <div class="instruction">
-                        <p class="subtitle has-text-black">
-                            <span>Homebrew</span>
-                            <button class="button is-small" onclick="onCopy('macos-brew')">
-                                <span class="icon">
-                                    <i class="fas fa-clipboard"></i>
-                                </span>
-                            </button>
-                        </p>
-                        <textarea id="macos-brew"></textarea>
-                        <pre id="macos-brew-instruction">{{ partial "content/install/macos-brew.html" . }}</pre>
-                    </div>
-                </section>
-                <section class="tab-content">
-                    <div class="instruction">
-                        <p class="subtitle has-text-black">
-                            <span>Bash</span>
-                            <button class="button is-small" onclick="onCopy('linux')">
-                                <span class="icon">
-                                    <i class="fas fa-clipboard"></i>
-                                </span>
-                            </button>
-                        </p>
-                        <textarea id="linux"></textarea>
-                        <pre id="linux-instruction">{{ partial "content/install/linux.html" . }}</pre>
+                    <div class="columns is-desktop">
+                        <div class="column instruction">
+                            <p class="subtitle has-text-black">
+                                <span>Bash</span>
+                                <button class="button is-small" onclick="onCopy('macos-bash')">
+                                    <span class="icon">
+                                        <i class="fas fa-clipboard"></i>
+                                    </span>
+                                </button>
+                            </p>
+                            <textarea id="macos-bash"></textarea>
+                            <div>
+                                <pre id="macos-bash-instruction">{{ partial "content/install/macos-bash.html" . }}</pre>
+                            </div>
+                        </div>
+                        <div class="column instruction">
+                            <p class="subtitle has-text-black">
+                                <span>Homebrew</span>
+                                <button class="button is-small" onclick="onCopy('macos-brew')">
+                                    <span class="icon">
+                                        <i class="fas fa-clipboard"></i>
+                                    </span>
+                                </button>
+                            </p>
+                            <textarea id="macos-brew"></textarea>
+                            <pre id="macos-brew-instruction">{{ partial "content/install/macos-brew.html" . }}</pre>
+                        </div>
                     </div>
                 </section>
                 <section class="tab-content">
-                    <div class="instruction">
-                        {{ partial "content/install/windows.html" . }}
+                    <div class="columns is-desktop">
+                        <div class="instruction">
+                            <p class="subtitle has-text-black">
+                                <span>Bash</span>
+                                <button class="button is-small" onclick="onCopy('linux')">
+                                    <span class="icon">
+                                        <i class="fas fa-clipboard"></i>
+                                    </span>
+                                </button>
+                            </p>
+                            <textarea id="linux"></textarea>
+                            <pre id="linux-instruction">{{ partial "content/install/linux.html" . }}</pre>
+                        </div>
+                    </div>
+                </section>
+                <section class="tab-content">
+                    <div class="columns is-desktop">
+                        <div class="instruction">
+                            {{ partial "content/install/windows.html" . }}
+                        </div>
                     </div>
                 </section>
             </div>

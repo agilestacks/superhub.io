@@ -42,9 +42,11 @@ pre {
     font-family: "JetBrainsMono", sans-serif;
 }
 
-.logo {
-    margin: auto 15%;
-    max-width: 250px;
+.image {
+    .logo {
+        display: inline;
+        max-width: 250px;
+    }
 }
 
 a.button {
@@ -55,12 +57,7 @@ a.button {
     margin: 5em 0;
 
     .buttons {
-        display: flex;
         margin-top: 2em;
-
-        * > {
-            margin-right: 5px;
-        }
     }
 }
 
@@ -83,26 +80,18 @@ a.button {
     }
 
     .tab-content.is-active {
-        display: flex;
-        
-        > div {
-            margin-left: 5em;
-        }
-
-        div:first-child {
-            margin-left: 0;
-        }
+        display: block;
     }
 
     .tab-content {
         .instruction {
-            display: flex;
-            flex-direction: column;
             position: relative;
+        }
 
-            // pre {
-            //     min-height: 160px;
-            // }
+        pre {
+            white-space: pre;
+            overflow-x: auto;
+            min-width: 100%;
         }
 
         textarea {
