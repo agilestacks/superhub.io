@@ -1,16 +1,25 @@
 {{ $hub_windows_bin_url := .Param "hub_windows_bin_url" }}
-<p class="subtitle has-text-black">
-    How to install
+<p class="instruction-header subtitle has-text-black">
+    <span>How to install</span>
+    <button class="button is-small" onclick="onCopy('wsl-linux')">
+        <span class="icon">
+            <i class="fas fa-clipboard"></i>
+        </span>
+    </button>
 </p>
 <p>
-    <a target="_blank" href="{{ $hub_windows_bin_url }}">Download</a>
-    <span>and rename to <code>hub.exe</code>, put in PATH, </span>
-    <span>and you are done with the install. </span>
-    
+    <span>You could use WSL which could be </span>
+    <a target="_blank" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">
+        installed
+    </a>
+    <span>from Microsoft Store. </span>
+    <span>The examples below are given for the Ubuntu Linux distribution.</span>
 </p>
+<textarea id="wsl-linux"></textarea>
+<pre id="wsl-linux-instruction" class="my-1">{{ partial "content/install/linux.html" . }}</pre>
 <p>
     <span>For complete details please refer to documentation: </span>
-    <a target="_blank" href="https://docs.agilestacks.com/article/u6a9cq5yya-hub-cli-on-windows">
+    <a target="_blank" href="https://docs.agilestacks.com/article/u6a9cq5yya-hub-cli-on-windows#windows_subsystem_for_linux">
         Hub CLI on Windows
     </a>
 </p>
