@@ -35,7 +35,7 @@
                 <section class="tab-content">
                     <div class="columns is-desktop">
                         <div class="column instruction">
-                            <p class="subtitle has-text-black">
+                            <p class="instruction-header subtitle has-text-black">
                                 <span>Bash</span>
                                 <button class="button is-small" onclick="onCopy('macos-bash')">
                                     <span class="icon">
@@ -44,12 +44,10 @@
                                 </button>
                             </p>
                             <textarea id="macos-bash"></textarea>
-                            <div>
-                                <pre id="macos-bash-instruction">{{ partial "content/install/macos-bash.html" . }}</pre>
-                            </div>
+                            <pre id="macos-bash-instruction">{{ partial "content/install/macos-bash.html" . }}</pre>
                         </div>
                         <div class="column instruction">
-                            <p class="subtitle has-text-black">
+                            <p class="instruction-header subtitle has-text-black">
                                 <span>Homebrew</span>
                                 <button class="button is-small" onclick="onCopy('macos-brew')">
                                     <span class="icon">
@@ -64,8 +62,8 @@
                 </section>
                 <section class="tab-content">
                     <div class="columns is-desktop">
-                        <div class="instruction">
-                            <p class="subtitle has-text-black">
+                        <div class="column instruction">
+                            <p class="instruction-header subtitle has-text-black">
                                 <span>Bash</span>
                                 <button class="button is-small" onclick="onCopy('linux')">
                                     <span class="icon">
@@ -80,7 +78,7 @@
                 </section>
                 <section class="tab-content">
                     <div class="columns is-desktop">
-                        <div class="instruction">
+                        <div class="column instruction">
                             {{ partial "content/install/windows.html" . }}
                         </div>
                     </div>

@@ -86,6 +86,10 @@ a.button {
     .tab-content {
         .instruction {
             position: relative;
+
+            &-header {
+                line-height: 1.5em;
+            }
         }
 
         pre {
