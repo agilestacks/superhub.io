@@ -25,8 +25,8 @@
                 <div class="column container is-fluid">
                     <div>
                         <p class="title is-2">SuperHub® Automation Hub</p>
-                        <p class="subtitle is-4">Push button deployments from customizale GitOps templates allow to simplify installation, configuration & management for composable software stacks. Out-of-the-box curation and composition of your software
-                            services has never been easier.</p>
+                        <p class="subtitle is-4">Push button deployments from customizale GitOps templates allow to simplify installation and management for your composable software stacks. 
+                        </p>
                     </div>
                     <div class="buttons is-centered"><a href=https://docs.agilestacks.com target=_blank
                             class=button><span class=icon><i class="fas fa-book"></i></span><span>Docs</span></a>
@@ -61,14 +61,6 @@
                                 <p class="instruction-header subtitle has-text-black"><span>How to install required tools</span>
                                     <button class="button is-small" onclick="onCopy('wsl-linux')">
                                         <span class=icon><i class="fas fa-clipboard"></i></span></button></p>
-                                <p><span>WSL can be</span>
-                                    <a target=_blank
-                                        href=https://docs.microsoft.com/en-us/windows/wsl/install-win10>installed</a>
-                                    <span>from Microsoft Store. You can also follow <a target=_blank
-                                        href=https://www.thomasmaurer.ch/2019/08/how-to-install-wsl-2-on-windows-server/>this blog</a> for WSL installation. <br></span>
-                                    <span>The examples below are provided for the Ubuntu Linux distribution.</span><br><br>
-                                    <span>Install awscli, kubectl, eksctl, jq, yq, nodejs, npm using the following commands:</span>
-                                </p>
                                 <textarea id=wsl-linux></textarea>
                                 <pre id=wsl-linux-instruction class=my-1>sudo apt-get update
 sudo apt-get install awscli
@@ -99,7 +91,7 @@ Default output format [None]: json
                         </div> 
                         <div class="columns is-desktop">
                             <div class="column instruction">
-                                <p class="instruction-header subtitle has-text-black"><span>Bash</span>
+                                <p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
                                     <button class="button is-small" onclick="onCopy('macos-bash')">
                                         <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea
                                     id=macos-bash></textarea>
@@ -163,7 +155,7 @@ Default output format [None]: json
                         </div> 
                         <div class="columns is-desktop">
                             <div class="column instruction">
-                                <p class="instruction-header subtitle has-text-black"><span>Bash</span>
+                                <p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI from Bash</span>
                                     <button class="button is-small" onclick="onCopy('linux')">
                                         <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea
                                     id=linux></textarea>
@@ -181,14 +173,6 @@ hub extensions install</pre>
                                 <p class="instruction-header subtitle has-text-black"><span>How to install required tools</span>
                                     <button class="button is-small" onclick="onCopy('wsl-linux')">
                                         <span class=icon><i class="fas fa-clipboard"></i></span></button></p>
-                                <p><span>WSL can be</span>
-                                    <a target=_blank
-                                        href=https://docs.microsoft.com/en-us/windows/wsl/install-win10>installed</a>
-                                    <span>from Microsoft Store. You can also follow <a target=_blank
-                                        href=https://www.thomasmaurer.ch/2019/08/how-to-install-wsl-2-on-windows-server/>this blog</a> for WSL installation. <br></span>
-                                    <span>The examples below are provided for the Ubuntu Linux distribution.</span><br><br>
-                                    <span>Install awscli, kubectl, eksctl, jq, yq, nodejs, npm using the following commands:</span>
-                                </p>
                                 <textarea id=wsl-linux></textarea>
                                 <pre id=wsl-linux-instruction class=my-1>sudo apt-get update
 sudo apt-get install awscli
