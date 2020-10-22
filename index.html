@@ -107,7 +107,21 @@ brew install hub</pre>
                     <section class=tab-content>
                         <div class="columns is-desktop">
                             <div class="column instruction">
-                                <p class="instruction-header subtitle has-text-black"><span>How to install required tools</span>
+                                <p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+                                    <button class="button is-small" onclick="onCopy('linux')">
+                                        <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea
+                                    id=linux></textarea>
+                                <pre id=linux-instruction>curl -O https://controlplane.agilestacks.io/dist/hub-cli/hub.linux_amd64
+mv hub.linux_amd64 hub
+chmod +x hub
+sudo mv hub /usr/local/bin
+hub extensions install
+hub extensions update</pre>
+                            </div>
+                        </div>                        
+                        <div class="columns is-desktop">
+                            <div class="column instruction">
+                                <p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
                                     <button class="button is-small" onclick="onCopy('wsl-linux')">
                                         <span class=icon><i class="fas fa-clipboard"></i></span></button></p>
                                 <p>
@@ -140,21 +154,43 @@ Default region name [None]: us-east-1
 Default output format [None]: json
                                     </pre>
                             </div>
-                        </div> 
+                        </div>
                         <div class="columns is-desktop">
                             <div class="column instruction">
-                                <p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
-                                    <button class="button is-small" onclick="onCopy('linux')">
-                                        <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea
-                                    id=linux></textarea>
-                                <pre id=linux-instruction>curl -O https://controlplane.agilestacks.io/dist/hub-cli/hub.linux_amd64
-mv hub.linux_amd64 hub
-chmod +x hub
-sudo mv hub /usr/local/bin
-hub extensions install
-hub extensions update</pre>
+                                <p class="instruction-header subtitle has-text-black"><span>How to install required tools (Amazon Linux, CentOS)</span>
+                                    <button class="button is-small" onclick="onCopy('wsl-linux')">
+                                        <span class=icon><i class="fas fa-clipboard"></i></span></button></p>
+                                <p>
+                                    <span>Install awscli, kubectl, eksctl, jq, yq, nodejs, npm using the following commands:</span>
+                                </p>
+                                <textarea id=wsl-linux></textarea>
+                                <pre id=wsl-linux-instruction class=my-1>sudo apt-get update
+sudo apt-get install awscli
+                                    
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+                                    
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+                                    
+sudo apt-get install -y jq
+                                    
+sudo add-apt-repository ppa:rmescandon/yq
+sudo apt-get install -y yq
+                                    
+sudo apt-get install -y nodejs
+sudo apt install -y npm
+                                    
+$ aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-east-1
+Default output format [None]: json
+                                    </pre>
                             </div>
-                        </div>
+                        </div>                                                 
                     </section>
                     <section class=tab-content>
                         <div class="columns is-desktop">
