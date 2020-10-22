@@ -65,25 +65,15 @@
                                     <span>Install awscli, kubectl, eksctl, jq, yq, nodejs, npm using the following commands:</span>
                                 </p>
                                 <textarea id=wsl-linux></textarea>
-                                <pre id=wsl-linux-instruction class=my-1>sudo apt-get update
-sudo apt-get install awscli
-                                    
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-sudo apt-get update
-sudo apt-get install -y kubectl
-                                    
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-                                    
-sudo apt-get install -y jq
-                                    
-sudo add-apt-repository ppa:rmescandon/yq
-sudo apt-get install -y yq
-                                    
-sudo apt-get install -y nodejs
-sudo apt install -y npm
-                                    
+                                <pre id=wsl-linux-instruction class=my-1>brew update
+brew install awscli
+brew install kubectl
+brew install eksctl
+brew install jq
+brew install yq
+brew install nodejs
+brew install npm
+
 $ aws configure
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
@@ -102,7 +92,8 @@ Default output format [None]: json
 mv hub.darwin_amd64 hub
 chmod +x hub
 sudo mv hub /usr/local/bin
-hub extensions install</pre>
+hub extensions update
+</pre>
                             </div>
                             <div class="column instruction">
                                 <p class="instruction-header subtitle has-text-black"><span>Homebrew</span>
@@ -161,7 +152,8 @@ Default output format [None]: json
 mv hub.linux_amd64 hub
 chmod +x hub
 sudo mv hub /usr/local/bin
-hub extensions install</pre>
+hub extensions install
+hub extensions update</pre>
                             </div>
                         </div>
                     </section>
