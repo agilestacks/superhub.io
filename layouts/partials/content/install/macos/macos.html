@@ -1,0 +1,41 @@
+<section class="tab-content">
+    <div class="columns is-desktop">
+        <div class="column instruction">
+            <p class="instruction-header subtitle has-text-black">
+                <span>How to install Hub CLI</span>
+                <button class="button is-small" onclick="onCopy('macos-bash')">
+                    <span class="icon">
+                        <i class="fas fa-clipboard"></i>
+                    </span>
+                </button>
+            </p>
+            <textarea id="macos-bash"></textarea>
+            <pre id="macos-bash-instruction" class="my-1">{{ partial "content/install/macos/macos-bash.html" . }}</pre>
+        </div>
+        <div class="column instruction">
+            <p class="instruction-header subtitle has-text-black">
+                <span>Homebrew</span>
+                <button class="button is-small" onclick="onCopy('macos-brew')">
+                    <span class="icon">
+                        <i class="fas fa-clipboard"></i>
+                    </span>
+                </button>
+            </p>
+            <textarea id="macos-brew"></textarea>
+            <pre id="macos-brew-instruction" class="my-1">{{ partial "content/install/macos/macos-brew.html" . }}</pre>
+        </div>
+    </div>
+    <div class="column instruction">
+        <p class="instruction-header subtitle has-text-black">
+            <span>How to install required tools (MacOS)</span>
+            <button class="button is-small" onclick="onCopy('macos-tools')">
+                <span class="icon">
+                    <i class="fas fa-clipboard"></i>
+                </span>
+            </button>
+        </p>
+        {{ partial "content/install/tools-info.html" . }}
+        <textarea id="macos-tools"></textarea>
+        <pre id="macos-tools-instruction" class="my-1">{{ partial "content/install/macos/tools-macos.html" . }}</pre>
+    </div>
+</section>

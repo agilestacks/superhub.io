@@ -12,8 +12,7 @@ One of way how to install `hugo` is just run command `brew install hugo`. For mo
 To build or update resources, you also need PostCSS to create the final assets. By default npm installs tools under the directory where you run npm install:
 
 ```bash
-sudo npm install -D --save autoprefixer
-sudo npm install -D --save postcss-cli
+npm install -D autoprefixer postcss-cli
 ```
 
 ## Local development

@@ -1,0 +1,66 @@
+<section class="tab-content">
+    <div class="columns is-desktop">
+        <div class="column instruction">
+            <p class="instruction-header subtitle has-text-black">
+                <span>How to install Hub CLI</span>
+                <button class="button is-small" onclick="onCopy('linux-bash')">
+                    <span class="icon">
+                        <i class="fas fa-clipboard"></i>
+                    </span>
+                </button>
+            </p>
+            <textarea id="linux-bash"></textarea>
+            <pre id="linux-bash-instruction" class="my-1">{{ partial "content/install/linux/linux-bash.html" . }}</pre>
+        </div>
+    </div>
+    <div class="tabs-with-content">
+        <div class="tabs is-small is-toggle">
+            <ul>
+                <li id="ubuntu">
+                    <a>
+                        <span class="icon is-small">
+                            <i class="fab fa-ubuntu" aria-hidden="true"></i>
+                        </span>
+                        <span>Ubuntu</span>
+                    </a>
+                </li>
+                <li id="centos">
+                    <a>
+                        <span class="icon is-small">
+                            <i class="fab fa-centos" aria-hidden="true"></i>
+                        </span>
+                        <span>CentOS</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs-content">
+            <div class="tab-content">
+                <p class="instruction-header subtitle has-text-black">
+                    <span>How to install required tools (Ubuntu)</span>
+                    <button class="button is-small" onclick="onCopy('linux-ubuntu')">
+                        <span class="icon">
+                            <i class="fas fa-clipboard"></i>
+                        </span>
+                    </button>
+                </p>
+                {{ partial "content/install/tools-info.html" . }}
+                <textarea id="linux-ubuntu"></textarea>
+                <pre id="linux-ubuntu-instruction" class="my-1">{{ partial "content/install/linux/tools-ubuntu.html" . }}</pre>
+            </div>
+            <div class="tab-content">
+                <p class="instruction-header subtitle has-text-black">
+                    <span>How to install required tools (Amazon Linux, CentOS)</span>
+                    <button class="button is-small" onclick="onCopy('linux-centos')">
+                        <span class="icon">
+                            <i class="fas fa-clipboard"></i>
+                        </span>
+                    </button>
+                </p>
+                {{ partial "content/install/tools-info.html" . }}
+                <textarea id="linux-centos"></textarea>
+                <pre id="linux-centos-instruction" class="my-1">{{ partial "content/install/linux/tools-centos.html" . }}</pre>
+            </div>
+        </div>
+    </div>
+</section>
