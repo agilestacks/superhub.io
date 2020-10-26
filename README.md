@@ -7,6 +7,12 @@ It's based on [hugo](https://gohugo.io/) framework for building websites. Also u
 
 ## Prepare
 One of way how to install `hugo` is just run command `brew install hugo`. For more details visit official hugo [site](https://gohugo.io/getting-started/installing/)
+To build or update resources, you also need PostCSS to create the final assets. By default npm installs tools under the directory where you run npm install:
+
+```
+sudo npm install -D --save autoprefixer
+sudo npm install -D --save postcss-cli
+```
 
 ## Local development
 To run site locally just call command `make serve`
