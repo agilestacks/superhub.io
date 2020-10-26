@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := build
+.DEFAULT_GOAL := serve
 
 clean:
 	rm -rf public
@@ -7,7 +7,9 @@ clean:
 	rm -rf .git/worktrees/public/
 
 prepare:
-	git worktree add -B gh-pages public upstream/gh-pages
+	git worktree add -B gh-pages public upstream/gh-pages && \
+	cd public && git pull
+	rm -rf public/*
 
 build:
 	hugo --minify
@@ -16,7 +18,7 @@ publish: clean prepare build
 	cd public && \
 	git add --all && \
 	git commit -m "Publishing to gh-pages" && \
-	git push --all
+	git push upstream gh-pages
 
 serve:
 	hugo serve
