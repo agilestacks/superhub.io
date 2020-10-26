@@ -24,9 +24,9 @@ function selectOSTab(id) {
     }
 })();
 
-let tabsWithContent = (function () {
-    let tabs = document.querySelectorAll('.tabs li');
-    let tabsContent = document.querySelectorAll('.tab-content');
+let tabsWithContent = function(root) {
+    let tabs = root.querySelectorAll(':scope > .tabs li');
+    let tabsContent = root.querySelector('.tabs-content').querySelectorAll(':scope > .tab-content');
 
     let deactvateAllTabs = function () {
         tabs.forEach(function (tab) {
@@ -58,4 +58,6 @@ let tabsWithContent = (function () {
     })
 
     tabs[0].click();
-})();
+};
+
+document.querySelectorAll('.tabs-with-content').forEach(tabsWithContent)
