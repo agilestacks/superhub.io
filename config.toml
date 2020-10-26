@@ -3,6 +3,11 @@ languageCode = "en-us"
 title = "SuperHub"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
 [params]
 agilestacks_docs_url = "https://docs.agilestacks.com"
 agilestacks_url      = "https://www.agilestacks.com"
