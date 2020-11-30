@@ -57,10 +57,24 @@
                         </span>
                     </button>
                 </p>
-                {{ partial "content/install/tools-info.html" . }}
+                {{ partial "content/install/linux/tools-info-centos.html" . }}
                 <textarea id="linux-centos"></textarea>
                 <pre id="linux-centos-instruction" class="my-1">{{ partial "content/install/linux/tools-centos.html" . }}</pre>
             </div>
+        </div>
+    </div>
+    <div class="columns is-desktop">
+        <div class="column instruction">
+            <p class="instruction-header subtitle has-text-black">
+                <span>How to install Hub CLI extensions</span>
+                <button class="button is-small" onclick="onCopy('linux-extensions')">
+                    <span class="icon">
+                        <i class="fas fa-clipboard"></i>
+                    </span>
+                </button>
+            </p>
+            <textarea id="linux-extensions"></textarea>
+            <pre id="linux-extensions-instruction" class="my-1">{{ partial "content/install/linux/linux-extensions.html" . }}</pre>
         </div>
     </div>
 </section>
