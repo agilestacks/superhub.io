@@ -2,17 +2,18 @@ sudo yum install -y git python3-pip jq
 
 sudo pip3 install awscli --upgrade
 
-curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -sLO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_linux_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
+curl -sL "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_linux_amd64.tar.gz" | tar -xz
+sudo mv eksctl /usr/local/bin
 
 # to check the latest version follow
 # https://github.com/mikefarah/yq/releases/
-sudo curl --silent --location "https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64" -o /usr/bin/yq
-sudo chmod +x /usr/bin/yq
+curl -sLO "https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64"
+chmod +x yq_linux_amd64
+sudo mv yq_linux_amd64 /usr/local/bin/yq
 
 curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 sudo yum install -y nodejs
