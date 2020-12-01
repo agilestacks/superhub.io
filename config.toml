@@ -17,4 +17,4 @@ hub_windows_bin_url  = "https://controlplane.agilestacks.io/dist/hub-cli/hub.win
 
 title = "SuperHub® Automation Hub"
 brief = "Hub CLI is stack packaging and deployment tool."
-description = "Hub CLI implements push button deployments from customizale GitOps templates.  Trust the complete automation hub delivering composable stacks with speed, security, and reliability. "
+description = "Hub CLI implements push button deployments from customizable GitOps templates.  Trust the complete automation hub delivering composable stacks with speed, security, and reliability. "
