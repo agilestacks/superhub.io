@@ -8,23 +8,10 @@ function onCopy(os) {
 }
 
 function selectOSTab(id) {
-    document.querySelector(`li#${id}`).classList.add('is-active');
+    document.querySelector(`li#${id}`).click();
 }
 
-(function () {
-    const {appVersion} = navigator;
-    if (appVersion.indexOf('Win') !== -1) {
-        selectOSTab('windows');
-    }
-    if (appVersion.indexOf('Mac') !== -1) {
-        selectOSTab('macos');
-    }
-    if (appVersion.indexOf('X11') !== -1 || appVersion.indexOf('Linux') !== -1) {
-        selectOSTab('linux');
-    }
-})();
-
-let tabsWithContent = function(root) {
+let tabsWithContent = function (root) {
     let tabs = root.querySelectorAll(':scope > .tabs li');
     let tabsContent = root.querySelector('.tabs-content').querySelectorAll(':scope > .tab-content');
 
@@ -60,4 +47,17 @@ let tabsWithContent = function(root) {
     tabs[0].click();
 };
 
-document.querySelectorAll('.tabs-with-content').forEach(tabsWithContent)
+(function () {
+    document.querySelectorAll('.tabs-with-content').forEach(tabsWithContent)
+
+    const { appVersion } = navigator;
+    if (appVersion.indexOf('Win') !== -1) {
+        selectOSTab('windows');
+    }
+    if (appVersion.indexOf('Mac') !== -1) {
+        selectOSTab('macos');
+    }
+    if (appVersion.indexOf('X11') !== -1 || appVersion.indexOf('Linux') !== -1) {
+        selectOSTab('linux');
+    }
+})();
