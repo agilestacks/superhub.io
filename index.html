@@ -1,9 +1,17 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=description content="Hub CLI is stack packaging and deployment tool."><link rel=canonical content="https://superhub.io/"><meta name=generator content="Hugo 0.76.5"><title>SuperHub</title><link rel="shortcut icon" href=https://superhub.io/favicon.ico><link rel=stylesheet href=https://superhub.io/main.b2c9ac41ad14d168a85c3ce93a9b7e138b6c71f06c25857752d4256a33359773.css integrity="sha256-ssmsQa0U0WioXDzpOpt+E4tscfBsJYV3UtQlajM1l3M="></head><body><header class=header><div class=container><div class="columns is-centered is-vcentered is-desktop"><div class="column is-one-third-desktop is-narrow"><figure class="image has-text-centered"><img class=logo src=https://superhub.io/images/logo.png></figure></div><div class="column container is-fluid"><div><p class="title is-2">SuperHub® Automation Hub</p><p class="subtitle is-4">Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete automation hub delivering composable stacks with speed, security, and reliability.</p></div><div class="buttons is-centered"><a href=https://docs.agilestacks.com target=_blank class=button><span class=icon><i class="fas fa-book"></i></span><span>Docs</span></a>
-<a href=https://www.agilestacks.com target=_blank class=button><span class=icon><i class="fas fa-cubes"></i></span><span>Agile Stacks</span></a>
-<a href=https://agilestacks-support.slack.com target=_blank class=button><span class=icon><i class="fab fa-slack-hash"></i></span><span>Slack</span></a>
-<a href=https://github.com/agilestacks/hub target=_blank class=button><span class=icon><i class="fab fa-github-square"></i></span><span>GitHub</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><h1 class=title>Getting Started</h1><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span><span>MacOS</span></a></li><li id=linux><a><span class="icon is-small"><i class="fab fa-linux" aria-hidden=true></i></span><span>Linux</span></a></li><li id=windows><a><span class="icon is-small"><i class="fab fa-windows" aria-hidden=true></i></span><span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=description content="Hub CLI is stack packaging and deployment tool."><link rel=canonical content="https://superhub.io/"><meta name=generator content="Hugo 0.82.0"><title>SuperHub</title><link rel="shortcut icon" href=https://superhub.io/favicon.ico><link rel=stylesheet href=https://superhub.io/main.0652657ad2606804fba112655660a84a304d85a21b207ca5aa627debeda91fc7.css integrity="sha256-BlJletJgaAT7oRJlVmCoSjBNhaIbIHylqmJ96+2pH8c="></head><body><header class=header><div class=container><div class="columns is-centered is-vcentered is-desktop"><div class="column is-one-third-desktop is-narrow"><figure class="image has-text-centered"><img class=logo src=https://superhub.io/images/logo.png></figure></div><div class="column container is-fluid"><div><p class="title is-2">SuperHub® Automation Hub</p><p class="subtitle is-4">Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete automation hub delivering composable stacks with speed, security, and reliability.</p></div><div class="buttons is-centered"><a href=https://docs.agilestacks.com target=_blank class=button><span class=icon><i class="fas fa-book"></i></span>
+<span>Docs</span></a>
+<a href=https://superhub.io/docs/AgileStacks_Datasheet_Mar21.pdf target=_blank class=button><span class=icon><i class="fas fa-cubes"></i></span>
+<span>Agile Stacks</span></a>
+<a href=https://agilestacks-support.slack.com target=_blank class=button><span class=icon><i class="fab fa-slack-hash"></i></span>
+<span>Slack</span></a>
+<a href=https://github.com/agilestacks/hub target=_blank class=button><span class=icon><i class="fab fa-github-square"></i></span>
+<span>GitHub</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><h1 class=title>Getting Started</h1><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span>
+<span>MacOS</span></a></li><li id=linux><a><span class="icon is-small"><i class="fab fa-linux" aria-hidden=true></i></span>
+<span>Linux</span></a></li><li id=windows><a><span class="icon is-small"><i class="fab fa-windows" aria-hidden=true></i></span>
+<span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
 <button class="button is-small" onclick="onCopy('macos-bash')">
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>curl -O https://controlplane.agilestacks.io/dist/hub-cli/hub.darwin_amd64
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>
+curl -O https://github.com/agilestacks/hub/releases/download/v1.0.0/hub.darwin_amd64
 mv hub.darwin_amd64 hub
 chmod +x hub
 sudo mv hub /usr/local/bin
@@ -24,16 +32,15 @@ brew install hub</pre></div></div><div class="column instruction"><p class="inst
 <span>using the following commands:</span></p><textarea id=macos-tools></textarea><pre id=macos-tools-instruction class=my-1>brew update
 brew install awscli kubectl eksctl jq yq node
 
-$ aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-east-1
-Default output format [None]: json</pre></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+aws configure</pre></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
 <button class="button is-small" onclick="onCopy('linux-bash')">
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>curl -O https://controlplane.agilestacks.io/dist/hub-cli/hub.linux_amd64
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>
+curl -O https://github.com/agilestacks/hub/releases/download/v1.0.0/hub.linux_amd64
 mv hub.linux_amd64 hub
 chmod +x hub
-sudo mv hub /usr/local/bin</pre></div></div><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=ubuntu><a><span class="icon is-small"><i class="fab fa-ubuntu" aria-hidden=true></i></span><span>Ubuntu</span></a></li><li id=centos><a><span class="icon is-small"><i class="fab fa-centos" aria-hidden=true></i></span><span>CentOS</span></a></li></ul></div><div class=tabs-content><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
+sudo mv hub /usr/local/bin</pre></div></div><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=ubuntu><a><span class="icon is-small"><i class="fab fa-ubuntu" aria-hidden=true></i></span>
+<span>Ubuntu</span></a></li><li id=centos><a><span class="icon is-small"><i class="fab fa-centos" aria-hidden=true></i></span>
+<span>CentOS</span></a></li></ul></div><div class=tabs-content><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
 <button class="button is-small" onclick="onCopy('linux-ubuntu')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
 <a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
@@ -62,11 +69,7 @@ sudo apt-get install -y yq
 sudo apt-get install -y nodejs
 sudo apt install -y npm
 
-$ aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-east-1
-Default output format [None]: json</pre></div><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Amazon Linux, CentOS)</span>
+aws configure</pre></div><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Amazon Linux, CentOS)</span>
 <button class="button is-small" onclick="onCopy('linux-centos')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
 <a target=_blank href=https://www.npmjs.com/get-npm>git</a><span>,</span>
@@ -97,19 +100,15 @@ sudo mv yq_linux_amd64 /usr/local/bin/yq
 curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 sudo yum install -y nodejs
 
-$ aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-east-1
-Default output format [None]: json
-</pre></div></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI extensions</span>
+aws configure</pre></div></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI extensions</span>
 <button class="button is-small" onclick="onCopy('linux-extensions')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-extensions></textarea><pre id=linux-extensions-instruction class=my-1>hub extensions install
 hub extensions update</pre></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
 <button class="button is-small" onclick="onCopy('wsl-linux')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Run the following commands from WSL shell. To start WSL use
 "C:\Distros\Ubuntu1804\ubuntu1804.exe"
-or similar command.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>curl -O https://controlplane.agilestacks.io/dist/hub-cli/hub.linux_amd64
+or similar command.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>
+curl -O https://github.com/agilestacks/hub/releases/download/v1.0.0/hub.linux_amd64
 mv hub.linux_amd64 hub
 chmod +x hub
 sudo mv hub /usr/local/bin</pre><p><br></p></div><div class=instruction><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Windows)</span>
@@ -146,9 +145,7 @@ sudo apt-get install -y yq
 sudo apt-get install -y nodejs
 sudo apt install -y npm
 
-$ aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-east-1
-Default output format [None]: json</pre><p><span>For complete details please refer to documentation:</span>
-<a target=_blank href=https://docs.agilestacks.com/article/u6a9cq5yya-hub-cli-on-windows#windows_subsystem_for_linux>Hub CLI on Windows</a></p></div></div></section></div></div></div></main><footer class=footer><div class="content has-text-centered"><p>&copy; 2020 Agile Stacks, Inc. All Rights Reserved</p></div></footer><script src=https://superhub.io/js/site.53884a181a89ec3dda82ed5d703dd2d3dc6d020a796f9df0637991f3330f8ef4.js integrity="sha256-U4hKGBqJ7D3agu1dcD3S09xtAgp5b53wY3mR8zMPjvQ="></script></body></html>
+aws configure</pre><p><span>For complete details please refer to documentation:</span>
+<a target=_blank href=https://docs.agilestacks.com/article/u6a9cq5yya-hub-cli-on-windows#windows_subsystem_for_linux>Hub CLI on Windows</a></p></div></div></section></div></div></div></main><footer class=footer><div class="content has-text-centered"><p><span>&copy; 2021</span>
+<a href=https://www.agilestacks.com target=_blank class=link>Agile Stacks, Inc.</a>
+<span>All Rights Reserved</span></p></div></footer><script src=https://superhub.io/js/site.40e36f98f731b8110ff088db6180086fabd6b61bae499a29a2d861384e53beae.js integrity="sha256-QONvmPcxuBEP8IjbYYAIb6vWthuuSZopothhOE5Tvq4="></script></body></html>
