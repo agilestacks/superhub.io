@@ -14,7 +14,7 @@ agilestacks_docs_url = "https://docs.agilestacks.com"
 agilestacks_url      = "https://www.agilestacks.com"
 github_repo_url      = "agilestacks/hub"
 slack_support_url    = "https://agilestacks-support.slack.com"
-hub_windows_bin_url  = "https://controlplane.agilestacks.io/dist/hub-cli/hub.windows_amd64.exe"
+hub_version          = "v1.0.0"
 
 title = "SuperHub® Automation Hub"
 brief = "Hub CLI is stack packaging and deployment tool."
