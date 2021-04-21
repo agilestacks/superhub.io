@@ -1,5 +1,13 @@
+{{ $agilestacks_url := .Param "agilestacks_url" }}
+
 <footer class="footer">
     <div class="content has-text-centered">
-        <p>&copy; {{ now.Format "2006" }} Agile Stacks, Inc. All Rights Reserved</p>
+        <p>
+            <span>&copy; {{ now.Format "2006" }} </span>
+            <a href="{{ $agilestacks_url }}" target="_blank" class="link">
+                Agile Stacks, Inc.
+            </a>
+            <span> All Rights Reserved</span>
+        </p>
     </div>
 </footer>

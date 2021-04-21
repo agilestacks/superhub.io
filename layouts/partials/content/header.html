@@ -1,6 +1,6 @@
 {{ $title                := .Param "title" }}
 {{ $description          := .Param "description" }}
-{{ $agilestacks_url      := .Param "agilestacks_url" }}
+{{ $agilestacks_overview := .Param "agilestacks_overview" | absURL }}
 {{ $agilestacks_docs_url := .Param "agilestacks_docs_url" }}
 {{ $github_repo_url      := .Param "github_repo_url" }}
 {{ $slack_support_url    := .Param "slack_support_url" }}
@@ -25,7 +25,7 @@
                         </span>
                         <span>Docs</span>
                     </a>
-                    <a href="{{ $agilestacks_url }}" target="_blank" class="button">
+                    <a href="{{ $agilestacks_overview }}" target="_blank" class="button">
                         <span class="icon">
                             <i class="fas fa-cubes"></i>
                         </span>

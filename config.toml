@@ -9,6 +9,7 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [params]
+agilestacks_overview = "docs/AgileStacks_Datasheet_Mar21.pdf"
 agilestacks_docs_url = "https://docs.agilestacks.com"
 agilestacks_url      = "https://www.agilestacks.com"
 github_repo_url      = "agilestacks/hub"
