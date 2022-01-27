@@ -4,7 +4,7 @@
 <meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name=description content="Hub CLI is stack packaging and deployment tool.">
 <link rel=canonical content="https://superhub.io/">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.92.0">
 <title>
 SuperHub
 </title>
@@ -32,17 +32,17 @@ SuperHub
 </span>
 <span>Docs</span>
 </a>
-<a href=https://superhub.io/docs/AgileStacks_Datasheet_Mar21.pdf target=_blank class=button>
-<span class=icon>
-<i class="fas fa-cubes"></i>
-</span>
-<span>Agile Stacks</span>
-</a>
 <a href=https://agilestacks-support.slack.com target=_blank class=button>
 <span class=icon>
 <i class="fab fa-slack-hash"></i>
 </span>
 <span>Slack</span>
+</a>
+<a href=https://github.com/agilestacks/hub/wiki target=_blank class=button>
+<span class=icon>
+<i class="fas fa-book"></i>
+</span>
+<span>Hub CLI Wiki</span>
 </a>
 <a href=https://github.com/agilestacks/hub target=_blank class=button>
 <span class=icon>
@@ -101,12 +101,13 @@ SuperHub
 </p>
 <textarea id=macos-bash></textarea>
 <pre id=macos-bash-instruction class=my-1>
-curl -O https://github.com/agilestacks/hub/releases/download/v1.0.2/hub.darwin_amd64
+curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.2/hub.darwin_amd64
 mv hub.darwin_amd64 hub
 chmod +x hub
 sudo mv hub /usr/local/bin
 hub extensions install
-hub extensions update</pre>
+hub extensions update
+</pre>
 </div>
 <div class="column instruction">
 <p class="instruction-header subtitle has-text-black">
@@ -162,10 +163,13 @@ aws configure</pre>
 </p>
 <textarea id=linux-bash></textarea>
 <pre id=linux-bash-instruction class=my-1>
-curl -O https://github.com/agilestacks/hub/releases/download/v1.0.2/hub.linux_amd64
+curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.2/hub.linux_amd64
 mv hub.linux_amd64 hub
 chmod +x hub
-sudo mv hub /usr/local/bin</pre>
+sudo mv hub /usr/local/bin
+hub extensions install
+hub extensions update
+</pre>
 </div>
 </div>
 <div class=tabs-with-content>
@@ -278,24 +282,8 @@ aws configure</pre>
 </div>
 </div>
 </div>
-<div class="columns is-desktop">
-<div class="column instruction">
-<p class="instruction-header subtitle has-text-black">
-<span>How to install Hub CLI extensions</span>
-<button class="button is-small" onclick="onCopy('linux-extensions')">
-<span class=icon>
-<i class="fas fa-clipboard"></i>
-</span>
-</button>
-</p>
-<textarea id=linux-extensions></textarea>
-<pre id=linux-extensions-instruction class=my-1>hub extensions install
-hub extensions update</pre>
-</div>
-</div>
 </section>
 <section class=tab-content>
-<div class="columns is-desktop">
 <div class="column instruction">
 <p class="instruction-header subtitle has-text-black">
 <span>How to install Hub CLI</span>
@@ -310,13 +298,16 @@ hub extensions update</pre>
 or similar command.</span></p>
 <textarea id=wsl-linux></textarea>
 <pre id=wsl-linux-instruction class=my-1>
-curl -O https://github.com/agilestacks/hub/releases/download/v1.0.2/hub.linux_amd64
+curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.2/hub.linux_amd64
 mv hub.linux_amd64 hub
 chmod +x hub
-sudo mv hub /usr/local/bin</pre>
+sudo mv hub /usr/local/bin
+hub extensions install
+hub extensions update
+</pre>
 <p><br></p>
 </div>
-<div class=instruction>
+<div class="column instruction">
 <p class="instruction-header subtitle has-text-black">
 <span>How to install required tools (Windows)</span>
 <button class="button is-small" onclick="onCopy('wsl-linux-tools')">
@@ -373,7 +364,6 @@ Hub CLI on Windows
 </a>
 </p>
 </div>
-</div>
 </section>
 </div>
 </div>
@@ -382,7 +372,7 @@ Hub CLI on Windows
 <footer class=footer>
 <div class="content has-text-centered">
 <p>
-<span>&copy; 2021 </span>
+<span>&copy; 2022 </span>
 <a href=https://www.agilestacks.com target=_blank class=link>
 Agile Stacks, Inc.
 </a>
