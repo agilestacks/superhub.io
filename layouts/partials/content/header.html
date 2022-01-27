@@ -1,9 +1,10 @@
-{{ $title                := .Param "title" }}
-{{ $description          := .Param "description" }}
+{{ $title := .Param "title" }}
+{{ $description := .Param "description" }}
 {{ $agilestacks_overview := .Param "agilestacks_overview" | absURL }}
 {{ $agilestacks_docs_url := .Param "agilestacks_docs_url" }}
-{{ $github_repo_url      := .Param "github_repo_url" }}
-{{ $slack_support_url    := .Param "slack_support_url" }}
+{{ $wiki_url := .Param "wiki_url" }}
+{{ $git_repo_url := .Param "git_repo_url" }}
+{{ $slack_support_url := .Param "slack_support_url" }}
 {{ $logo := "images/logo.png" | absURL }}
 <header class="header">
     <div class="container ">
@@ -25,19 +26,19 @@
                         </span>
                         <span>Docs</span>
                     </a>
-                    <a href="{{ $agilestacks_overview }}" target="_blank" class="button">
-                        <span class="icon">
-                            <i class="fas fa-cubes"></i>
-                        </span>
-                        <span>Agile Stacks</span>
-                    </a>
                     <a href="{{ $slack_support_url }}" target="_blank" class="button">
                         <span class="icon">
                             <i class="fab fa-slack-hash"></i>
                         </span>
                         <span>Slack</span>
                     </a>
-                    <a href="https://github.com/{{ $github_repo_url }}" target="_blank" class="button">
+                    <a href="{{ $wiki_url }}" target="_blank" class="button">
+                        <span class="icon">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        <span>Hub CLI Wiki</span>
+                    </a>
+                    <a href="{{ $git_repo_url }}" target="_blank" class="button">
                         <span class="icon">
                             <i class="fab fa-github-square"></i>
                         </span>
