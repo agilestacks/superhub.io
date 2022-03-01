@@ -88,6 +88,63 @@ a.button {
     }
 }
 
+.github-btn {
+    background: #000;
+    color: var(--grey700);
+    border: 1px solid var(--grey400);
+    border-radius: 8px;
+    margin: 1em 0;
+    padding: .25em .75em;
+    text-decoration: none;
+    font-family: 'Google Sans Display', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+  }
+  
+  .github-btn::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: -1px 0 0 .3em ;
+    opacity: .6;
+    background-image: url('../images/github.svg');
+  }
+
+  .console-btn {
+    background: var(--blue600);
+    color: #e7feff;
+    border: none;
+    border-radius: 8px;
+    margin: 0;
+    padding: .5em .75em;
+    text-decoration: none;
+    font-family: 'Google Sans Display', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    width: 300px;
+}
+  
+.console-btn::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin: 2px .3em 0 0;
+    background-image: url('../images/cloud-shell.svg');
+    background-repeat: none;
+}
+   
+
 .tabs-with-content {
     .tabs.is-toggle a {
         background-color: #fff;
