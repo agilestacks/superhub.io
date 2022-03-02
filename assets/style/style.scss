@@ -106,7 +106,7 @@ a.button {
     width: 180px;
   }
   
-  .github-btn::after {
+.github-btn::after {
     content: '';
     display: inline-block;
     width: 20px;
@@ -114,11 +114,11 @@ a.button {
     margin: -1px 0 0 .3em ;
     opacity: .6;
     background-image: url('../images/github.svg');
-  }
+}
 
-  .console-btn {
-    background: var(--blue600);
-    color: #e7feff;
+.console-btn {
+    background: #000;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     margin: 0;
@@ -143,6 +143,7 @@ a.button {
     background-image: url('../images/cloud-shell.svg');
     background-repeat: none;
 }
+  
    
 
 .tabs-with-content {

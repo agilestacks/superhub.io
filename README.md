@@ -1,6 +1,6 @@
 # This project is build for superhub.io website
 
-It's based on [hugo](https://gohugo.io/) framework for building websites. Also using next assets:
+This website is based on [hugo](https://gohugo.io/) framework for building websites. Also using next assets:
 
 - [bulma.io](https://bulma.io/) as css framework.
 - [fontawesome](https://fontawesome.com/) as font for icons

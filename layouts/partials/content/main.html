@@ -1,30 +1,51 @@
 <main class="main">
     <div class="container is-fluid">
         <h1 class="title">GCP Support Sandboxes</h1>
+        <p class="subtitle is-6">SuperHub is an open source tool that helps cloud practitioners to automate deployments of GCP sandbox environemnts. It offers:</p>
 
         <div class="steps">
 
-        <section class="content">            
-            <h1 class="title">SuperHub is an open source tool that helps cloud practitioners to automate deployments of GCP sandbox environemnts. It offers:</h1>
+        <section class="content is-6">            
             <ul>
-              <li><b>Sandbox Templates</b> - Several supported sandboxed built on cloud native stack to demo the use of GKE, Spanner and other Google Cloud services.</li>
-              <li><b>One-click deployment script</b> of the service to Google Cloud Platform</li>
+              <li><b>Sandbox Templates</b> - Several supported sandboxes built on cloud native stack:
+              <a target="_blank" href="https://source.developers.google.com/p/superhub/r/stacks" style="color: rgb(197, 197, 72)">GKE</a><span>, </span> 
+              <a target="_blank" href="https://source.developers.google.com/p/superhub/r/stacks" style="color: rgb(197, 197, 72)">Web Server</a><span>, </span> 
+              <a target="_blank" href="https://source.developers.google.com/p/superhub/r/stacks" style="color: rgb(197, 197, 72)">Cloud Spanner</a><span>. </span> 
+              </li>
+              <li><b>One-click Deployment</b> of complete sandbox environments to Google Cloud Platform</li>
               <li><b>Load Generator</b> - a component that produces synthetic traffic on a demo application</li>
             </ul>
+        
 
         </section>
-            <a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://source.developers.google.com/p/superhub/r/stacks&cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_tutorial=hub-anthos-with-demo-app-cs.md" target="_blank" class="button">
-                <span class="icon">
-                    <i class="fas fa-terminal"></i>
-                </span>
-                <span>Open in Google Cloud Shell</span>
-            </a>
-
             <br>
-            <br>
-            <br>
+            <p class="subtitle is-3">Using GCP Sandboxes from Cloud Shell</p>
 
         </div>
+
+        <br>
+        <div class="tabs-with-content">
+            <div class="tabs is-small is-toggle">
+                <ul>
+                    <li id="linux">
+                        <a>
+                            <span class="icon is-small">
+                                <i class="fas fa-cloud" aria-hidden="true"></i>
+                            </span>
+                            <span>Google Cloud</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box tabs-content">
+                {{ partial "content/install/gcp/linux.html" . }}
+            </div>
+        </div>
+        <br>
+        <br>
+        <p class="subtitle is-3">Installing Hub CLI on a local workstation (Mac, Windows, Linux)</p>
+        <br>
 
         <div class="tabs-with-content">
             <div class="tabs is-small is-toggle">
