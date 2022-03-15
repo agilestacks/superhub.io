@@ -10,7 +10,7 @@ priority = 0.5
 
 [params]
 agilestacks_overview = "docs/AgileStacks_Datasheet_Mar21.pdf"
-agilestacks_docs_url = "https://docs.agilestacks.com"
+agilestacks_docs_url = "https://github.com/agilestacks/google-stacks/blob/main/hub-anthos-with-demo-app.md"
 agilestacks_url      = "https://www.agilestacks.com"
 wiki_url             = "https://github.com/agilestacks/hub/wiki"
 git_repo_url         = "https://github.com/agilestacks/hub"
