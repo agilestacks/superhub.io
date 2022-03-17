@@ -25,17 +25,20 @@
             <pre id="macos-brew-instruction" class="my-1">{{ partial "content/install/macos/macos-brew.html" . }}</pre>
         </div>
     </div>
-    <div class="column instruction">
-        <p class="instruction-header subtitle has-text-black">
-            <span>How to install required tools (MacOS)</span>
-            <button class="button is-small" onclick="onCopy('macos-tools')">
-                <span class="icon">
-                    <i class="fas fa-clipboard"></i>
-                </span>
-            </button>
-        </p>
-        {{ partial "content/install/tools-info.html" . }}
-        <textarea id="macos-tools"></textarea>
-        <pre id="macos-tools-instruction" class="my-1">{{ partial "content/install/macos/tools-macos.html" . }}</pre>
+    <div class="columns is-desktop">
+        <div class="column instruction">
+            <p class="instruction-header subtitle has-text-black">
+                <span>How to install required tools (MacOS)</span>
+                <button class="button is-small" onclick="onCopy('macos-tools')">
+                    <span class="icon">
+                        <i class="fas fa-clipboard"></i>
+                    </span>
+                </button>
+            </p>
+            {{ partial "content/install/tools-info.html" . }}
+            <textarea id="macos-tools"></textarea>
+            <pre id="macos-tools-instruction"
+                class="my-1">{{ partial "content/install/macos/tools-macos.html" . }}</pre>
+        </div>
     </div>
 </section>
