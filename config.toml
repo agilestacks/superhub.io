@@ -9,13 +9,19 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [params]
-agilestacks_overview = "docs/AgileStacks_Datasheet_Mar21.pdf"
-agilestacks_docs_url = "https://github.com/agilestacks/google-stacks/blob/main/hub-anthos-with-demo-app.md"
-agilestacks_url      = "https://www.agilestacks.com"
-wiki_url             = "https://github.com/agilestacks/hub/wiki"
-git_repo_url         = "https://github.com/agilestacks/hub"
-slack_support_url    = "https://agilestacks-support.slack.com"
-hub_version          = "v1.0.4"
+wiki_url     = "https://github.com/agilestacks/hub/wiki"
+git_repo_url = "https://github.com/agilestacks/hub"
+
+hub_version = "v1.0.4"
+
+sandboxes_git_repo_url = "https://github.com/agilestacks/google-stacks"
+
+sandbox_gke_anthos_demo_app = "hub-anthos-with-demo-app.md"
+sandbox_gke_demo_app = "hub-gke-with-demo-app.md"
+sandbox_gke = "hub-just-gke.md"
+sandbox_php_web_server = "hub-php-web-server.md"
+
+gcp_cloudshell_url = "https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell"
 
 title = "SuperHub® Automation Hub"
 brief = "Hub CLI is stack packaging and deployment tool."
