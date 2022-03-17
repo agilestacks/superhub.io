@@ -1,23 +1,16 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=description content="Hub CLI is stack packaging and deployment tool."><link rel=canonical content="https://superhub.io/"><meta name=generator content="Hugo 0.94.2"><title>SuperHub</title><link rel="shortcut icon" href=https://superhub.io/favicon.ico><link rel=stylesheet href=https://superhub.io/main.f03df980bc0a0ae08b2b9f932e11fdd41116a60ddfde485b979faf61ccc7c06d.css integrity="sha256-8D35gLwKCuCLK5+TLhH91BEWpg3f3khbl5+vYczHwG0="></head><body><header class=header><div class=container><div class="columns is-centered is-vcentered is-desktop"><div class="column is-one-third-desktop is-narrow"><figure class="image has-text-centered"><img class=logo src=https://superhub.io/images/logo.png></figure></div><div class="column container is-fluid"><div><p class="title is-2">SuperHub® Automation Hub</p><p class="subtitle is-4">Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete automation hub delivering composable stacks with speed, security, and reliability.</p></div><div class="buttons is-centered"><a href=https://github.com/agilestacks/hub target=_blank class=button><span class=icon><i class="fab fa-github-square"></i></span>
-<span>GitHub</span></a>
-<a href=https://github.com/agilestacks/hub/wiki target=_blank class=button><span class=icon><i class="fas fa-book"></i></span>
-<span>Hub CLI Wiki</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><h1 class=title>GCP Support Sandboxes</h1><p class="subtitle is-6">SuperHub is an open source tool that helps cloud practitioners to automate deployments of GCP sandbox environemnts. It offers:</p><section class="content is-6"><ul><li><b>Sandbox Templates</b> - Several supported sandboxes built on cloud native stack:
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=description content="Hub CLI is stack packaging and deployment tool."><link rel=canonical content="https://superhub.io/"><meta name=generator content="Hugo 0.76.5"><title>SuperHub</title><link rel="shortcut icon" href=https://superhub.io/favicon.ico><link rel=stylesheet href=https://superhub.io/main.a6bd6a67dd86558d4443fc27c6e976af02174d3da6ff35f6dd845af1cfa70ceb.css integrity="sha256-pr1qZ92GVY1EQ/wnxul2rwIXTT2m/zX23YRa8c+nDOs="></head><body><header class=header><div class=container><div class="columns is-centered is-vcentered is-desktop"><div class="column is-one-third-desktop is-narrow"><figure class="image has-text-centered"><img class=logo src=https://superhub.io/images/logo.png></figure></div><div class="column container is-fluid"><div><p class="title is-2">SuperHub® Automation Hub</p><p class="subtitle is-4">Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete automation hub delivering composable stacks with speed, security, and reliability.</p></div><div class="buttons is-centered"><a href=https://github.com/agilestacks/hub target=_blank class=button><span class=icon><i class="fab fa-github-square"></i></span><span>GitHub</span></a>
+<a href=https://github.com/agilestacks/hub/wiki target=_blank class=button><span class=icon><i class="fas fa-book"></i></span><span>Hub CLI Wiki</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><h1 class=title>GCP Support Sandboxes</h1><p class="subtitle is-6">SuperHub is an open source tool that helps cloud practitioners to automate deployments of GCP sandbox environemnts. It offers:</p><section class="content is-6"><ul><li><b>Sandbox Templates</b> - Several supported sandboxes built on cloud native stack:
 <a class="has-text-white is-underlined" target=_blank href=https://github.com/agilestacks/google-stacks/blob/main/hub-gke-with-demo-app.md>GKE</a>
 <span>,</span>
-<a class="has-text-white is-underlined" target=_blank href=https://github.com/agilestacks/google-stacks/blob/main/hub-php-web-server.md>Web Server</a></li><li><b>One-click Deployment</b> of complete sandbox environments to Google Cloud Platform</li><li><b>Load Generator</b> - a component that produces synthetic traffic on a demo application</li></ul></section><br><p class="subtitle is-3">Using GCP Sandboxes from Cloud Shell</p><br><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=linux><a><span class="icon is-small"><i class="fas fa-cloud" aria-hidden=true></i></span>
-<span>Google Cloud</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><h1 class="subtitle has-text-black">How to deploy a Sandbox Environment</h1><p class=mb-5><span>Sign in to the correct GCP account using</span>
+<a class="has-text-white is-underlined" target=_blank href=https://github.com/agilestacks/google-stacks/blob/main/hub-php-web-server.md>Web Server</a></li><li><b>One-click Deployment</b> of complete sandbox environments to Google Cloud Platform</li><li><b>Load Generator</b> - a component that produces synthetic traffic on a demo application</li></ul></section><br><p class="subtitle is-3">Using GCP Sandboxes from Cloud Shell</p><br><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=linux><a><span class="icon is-small"><i class="fas fa-cloud" aria-hidden=true></i></span><span>Google Cloud</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><h1 class="subtitle has-text-black">How to deploy a Sandbox Environment</h1><p class=mb-5><span>Sign in to the correct GCP account using</span>
 <a href=https://console.cloud.google.com/ target=_blank>Google Cloud Platform web console.</a>
 <span>If you have a</span>
 <a href=https://cloud.google.com/shell target=_blank>Cloud Shell</a>
-<span>session running, clicking the button will restart it.</span></p><h1 class="subtitle has-text-black">Available Sandboxes</h1><p class=mb-2 class=has-text-black>GKE cluster with Demo application</h2><p class=mb-5><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-gke-with-demo-app.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span>
-<span>Deploy GKE + Demo App</span></a></p><p class=mb-2 class=has-text-black>GKE cluster with Anthos Service Mesh and Demo application</p><p class=mb-5><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-anthos-with-demo-app.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span>
-<span>Deploy GKE + Antos + Demo App</span></a></p><p class=mb-2 class=has-text-black>Just GKE cluster</h2><p class=mb-5><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-just-gke.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span>
-<span>Deploy empty GKE cluster</span></a></p><p class=mb-2 class=has-text-black>VM based Web server with PHP and Wordpress</h2><p><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-php-web-server.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span>
-<span>VM + Web Server + PHP</span></a></p></div></div></section></div></div><br><br><p class="subtitle is-3">Installing Hub CLI on a local workstation (Mac, Windows, Linux)</p><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span>
-<span>MacOS</span></a></li><li id=linux><a><span class="icon is-small"><i class="fab fa-linux" aria-hidden=true></i></span>
-<span>Linux</span></a></li><li id=windows><a><span class="icon is-small"><i class="fab fa-windows" aria-hidden=true></i></span>
-<span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
-<button class="button is-small" onclick='onCopy("macos-bash")'>
+<span>session running, clicking the button will restart it.</span></p><h1 class="subtitle has-text-black">Available Sandboxes</h1><p class=mb-2 class=has-text-black>GKE cluster with Demo application</h2><p class=mb-5><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-gke-with-demo-app.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span><span>Deploy GKE + Demo App</span></a></p><p class=mb-2 class=has-text-black>GKE cluster with Anthos Service Mesh and Demo application</p><p class=mb-5><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-anthos-with-demo-app.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span><span>Deploy GKE + Antos + Demo App</span></a></p><p class=mb-2 class=has-text-black>Just GKE cluster</h2><p class=mb-5><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-just-gke.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span><span>Deploy empty GKE cluster</span></a></p><p class=mb-2 class=has-text-black>VM based Web server with PHP and Wordpress</h2><p><a class="button is-black" target=_blank href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell&cloudshell_git_repo=https://github.com/agilestacks/google-stacks&cloudshell_tutorial=hub-php-web-server.md"><span class="icon is-small"><i class="fas fa-terminal" aria-hidden=true></i></span><span>VM + Web Server + PHP</span></a></p><br><h1 class="subtitle has-text-black">Quick Start</h1><p><span>Install supported sandboxes using the following commands:</span></p><textarea id=linux-gcp></textarea><pre id=linux-bash-instruction class=my-1>hub stack init -f sandbox-name.yaml
+hub stack configure
+hub stack deploy
+</pre></div></div></section></div></div><br><br><p class="subtitle is-3">Installing Hub CLI on a local workstation (Mac, Windows, Linux)</p><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span><span>MacOS</span></a></li><li id=linux><a><span class="icon is-small"><i class="fab fa-linux" aria-hidden=true></i></span><span>Linux</span></a></li><li id=windows><a><span class="icon is-small"><i class="fab fa-windows" aria-hidden=true></i></span><span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+<button class="button is-small" onclick="onCopy('macos-bash')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>
 curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.4/hub.darwin_amd64
 mv hub.darwin_amd64 hub
@@ -26,10 +19,10 @@ sudo mv hub /usr/local/bin
 hub extensions install
 hub extensions update
 </pre></div><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>Homebrew</span>
-<button class="button is-small" onclick='onCopy("macos-brew")'>
+<button class="button is-small" onclick="onCopy('macos-brew')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-brew></textarea><pre id=macos-brew-instruction class=my-1>brew tap agilestacks/brew
 brew install agilestacks/brew/hub</pre></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (MacOS)</span>
-<button class="button is-small" onclick='onCopy("macos-tools")'>
+<button class="button is-small" onclick="onCopy('macos-tools')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
 <a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
 <a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>,</span>
@@ -42,7 +35,7 @@ brew install agilestacks/brew/hub</pre></div></div><div class="columns is-deskto
 brew install awscli kubectl eksctl jq yq node
 
 aws configure</pre></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
-<button class="button is-small" onclick='onCopy("linux-bash")'>
+<button class="button is-small" onclick="onCopy('linux-bash')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>
 curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.4/hub.linux_amd64
 mv hub.linux_amd64 hub
@@ -50,10 +43,8 @@ chmod +x hub
 sudo mv hub /usr/local/bin
 hub extensions install
 hub extensions update
-</pre></div></div><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=ubuntu><a><span class="icon is-small"><i class="fab fa-ubuntu" aria-hidden=true></i></span>
-<span>Ubuntu</span></a></li><li id=centos><a><span class="icon is-small"><i class="fab fa-centos" aria-hidden=true></i></span>
-<span>CentOS</span></a></li></ul></div><div class=tabs-content><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
-<button class="button is-small" onclick='onCopy("linux-ubuntu")'>
+</pre></div></div><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=ubuntu><a><span class="icon is-small"><i class="fab fa-ubuntu" aria-hidden=true></i></span><span>Ubuntu</span></a></li><li id=centos><a><span class="icon is-small"><i class="fab fa-centos" aria-hidden=true></i></span><span>CentOS</span></a></li></ul></div><div class=tabs-content><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
+<button class="button is-small" onclick="onCopy('linux-ubuntu')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
 <a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
 <a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>,</span>
@@ -82,7 +73,7 @@ sudo apt-get install -y nodejs
 sudo apt install -y npm
 
 aws configure</pre></div><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Amazon Linux, CentOS)</span>
-<button class="button is-small" onclick='onCopy("linux-centos")'>
+<button class="button is-small" onclick="onCopy('linux-centos')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
 <a target=_blank href=https://www.npmjs.com/get-npm>git</a><span>,</span>
 <a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
@@ -113,7 +104,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 sudo yum install -y nodejs
 
 aws configure</pre></div></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
-<button class="button is-small" onclick='onCopy("wsl-linux")'>
+<button class="button is-small" onclick="onCopy('wsl-linux')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Run the following commands from WSL shell. To start WSL use "C:\Distros\Ubuntu1804\ubuntu1804.exe" or similar command.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>
 curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.4/hub.linux_amd64
 mv hub.linux_amd64 hub
@@ -122,7 +113,7 @@ sudo mv hub /usr/local/bin
 hub extensions install
 hub extensions update
 </pre><p><br></p></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Windows)</span>
-<button class="button is-small" onclick='onCopy("wsl-linux-tools")'>
+<button class="button is-small" onclick="onCopy('wsl-linux-tools')">
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>WSL can be</span>
 <a target=_blank href=https://docs.microsoft.com/en-us/windows/wsl/install-win10>installed</a>
 <span>from Microsoft Store. You can also follow</span>
