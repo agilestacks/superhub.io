@@ -4,11 +4,13 @@
 {{ $sandbox_gke_demo_app := .Param "sandbox_gke_demo_app" }}
 {{ $sandbox_gke := .Param "sandbox_gke" }}
 {{ $sandbox_php_web_server := .Param "sandbox_php_web_server" }}
+{{ $sandbox_cloud_sql := .Param "sandbox_cloud_sql" }}
 
 {{ $gke_antons_demo_app_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_gke_anthos_demo_app }}
 {{ $gke_demo_app_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_gke_demo_app }}
 {{ $gke_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_gke }}
 {{ $php_web_server_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_php_web_server }}
+{{ $cloud_sql_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_cloud_sql }}
 
 <main class="main">
     <div class="container is-fluid">
@@ -25,6 +27,10 @@
                     <span>, </span>
                     <a class="has-text-white is-underlined" target="_blank" href="{{ $php_web_server_git_url }}">
                         Web Server
+                    </a>
+                    <span>, </span>
+                    <a class="has-text-white is-underlined" target="_blank" href="{{ $cloud_sql_git_url }}">
+                        Cloud SQL
                     </a>
                 </li>
                 <li>

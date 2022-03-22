@@ -6,11 +6,13 @@
 {{ $sandbox_gke_demo_app := .Param "sandbox_gke_demo_app" }}
 {{ $sandbox_gke := .Param "sandbox_gke" }}
 {{ $sandbox_php_web_server := .Param "sandbox_php_web_server" }}
+{{ $sandbox_cloud_sql := .Param "sandbox_cloud_sql" }}
 
 {{ $gke_antons_demo_app_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_gke_anthos_demo_app }}
 {{ $gke_demo_app_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_gke_demo_app }}
 {{ $gke_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_gke }}
 {{ $php_web_server_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_php_web_server }}
+{{ $cloud_sql_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_cloud_sql }}
 
 {{ $gke_antons_demo_app_text := "GKE cluster with Anthos Service Mesh and Demo application" }}
 {{ $gke_demo_app_text := "GKE cluster with Demo application" }}
@@ -22,7 +24,7 @@
         <div class="column instruction">
             <h1 class="subtitle has-text-black">How to deploy a Sandbox Environment</h1>
             <p class="mb-5">
-                <span>Sign in to the correct GCP account using </span>
+                <span>Sign in to your GCP account using </span>
                 <a href="https://console.cloud.google.com/" target="_blank">
                     Google Cloud Platform web console.
                 </a>
@@ -55,7 +57,7 @@
                     <span class="icon is-small">
                         <i class="fas fa-terminal" aria-hidden="true"></i>
                     </span>
-                    <span>Deploy GKE + Antos + Demo App</span>
+                    <span>Deploy GKE + ASM + Demo App</span>
                 </a>
             </p>
 
@@ -72,14 +74,27 @@
             </p>
 
             <p class="mb-2" class="has-text-black">
-                VM based Web server with PHP and Wordpress
+                Web Server VM with SQL Server
             </h2>
             <p>
                 <a class="button is-black" target="_blank" href="{{ $php_web_server_url }}">
                     <span class="icon is-small">
                         <i class="fas fa-terminal" aria-hidden="true"></i>
                     </span>
-                    <span>Deploy VM + Web Server + PHP</span>
+                    <span>Deploy Web Server VM + Cloud SQL</span>
+                </a>
+            </p>
+
+            <br>
+            <p class="mb-2" class="has-text-black">
+                Cloud SQL instance with k6.io load test
+            </h2>
+            <p>
+                <a class="button is-black" target="_blank" href="{{ $cloud_sql_url }}">
+                    <span class="icon is-small">
+                        <i class="fas fa-terminal" aria-hidden="true"></i>
+                    </span>
+                    <span>Deploy Cloud SQL + Load Test</span>
                 </a>
             </p>
             <br>

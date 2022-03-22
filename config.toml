@@ -20,9 +20,10 @@ sandbox_gke_anthos_demo_app = "hub-anthos-with-demo-app.md"
 sandbox_gke_demo_app = "hub-gke-with-demo-app.md"
 sandbox_gke = "hub-just-gke.md"
 sandbox_php_web_server = "hub-php-web-server.md"
+sandbox_cloud_sql = "hub-cloud-sql-perftest.md"
 
 gcp_cloudshell_url = "https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell"
 
 title = "SuperHub® Automation Hub"
 brief = "Hub CLI is stack packaging and deployment tool."
-description = "Hub CLI implements push button deployments from customizable GitOps templates.  Trust the complete automation hub delivering composable stacks with speed, security, and reliability. "
+description = "Hub CLI implements push button deployments from customizable GitOps templates.  Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability. "
