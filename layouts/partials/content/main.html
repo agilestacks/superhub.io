@@ -5,12 +5,14 @@
 {{ $sandbox_gke := .Param "sandbox_gke" }}
 {{ $sandbox_php_web_server := .Param "sandbox_php_web_server" }}
 {{ $sandbox_cloud_sql := .Param "sandbox_cloud_sql" }}
+{{ $sandbox_cloud_composer := .Param "sandbox_cloud_composer" }}
 
 {{ $gke_antons_demo_app_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_gke_anthos_demo_app }}
 {{ $gke_demo_app_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_gke_demo_app }}
 {{ $gke_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_gke }}
 {{ $php_web_server_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_php_web_server }}
 {{ $cloud_sql_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_cloud_sql }}
+{{ $cloud_composer_git_url := printf "%s/blob/main/%s" $git_repo_url $sandbox_cloud_composer }}
 
 <main class="main">
     <div class="container is-fluid">
@@ -31,6 +33,10 @@
                     <span>, </span>
                     <a class="has-text-white is-underlined" target="_blank" href="{{ $cloud_sql_git_url }}">
                         Cloud SQL
+                    </a>
+                    <span>, </span>
+                    <a class="has-text-white is-underlined" target="_blank" href="{{ $cloud_composer_git_url }}">
+                        Cloud Composer
                     </a>
                 </li>
                 <li>

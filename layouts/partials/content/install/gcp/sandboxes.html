@@ -7,12 +7,14 @@
 {{ $sandbox_gke := .Param "sandbox_gke" }}
 {{ $sandbox_php_web_server := .Param "sandbox_php_web_server" }}
 {{ $sandbox_cloud_sql := .Param "sandbox_cloud_sql" }}
+{{ $sandbox_cloud_composer := .Param "sandbox_cloud_composer" }}
 
 {{ $gke_antons_demo_app_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_gke_anthos_demo_app }}
 {{ $gke_demo_app_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_gke_demo_app }}
 {{ $gke_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_gke }}
 {{ $php_web_server_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_php_web_server }}
 {{ $cloud_sql_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_cloud_sql }}
+{{ $cloud_composer_url := printf "%s&cloudshell_tutorial=%s" $sandbox_url $sandbox_cloud_composer }}
 
 {{ $gke_antons_demo_app_text := "GKE cluster with Anthos Service Mesh and Demo application" }}
 {{ $gke_demo_app_text := "GKE cluster with Demo application" }}
@@ -39,7 +41,7 @@
 
             <p class="mb-2" class="has-text-black">
                 GKE cluster with Demo application
-            </h2>
+            </p>
             <p class="mb-5">
                 <a class="button is-black" target="_blank" href="{{ $gke_demo_app_url }}">
                     <span class="icon is-small">
@@ -63,7 +65,7 @@
 
             <p class="mb-2" class="has-text-black">
                 Just GKE cluster
-            </h2>
+            </p>
             <p class="mb-5">
                 <a class="button is-black" target="_blank" href="{{ $gke_url }}">
                     <span class="icon is-small">
@@ -75,7 +77,7 @@
 
             <p class="mb-2" class="has-text-black">
                 Web Server VM with SQL Server
-            </h2>
+            </p>
             <p>
                 <a class="button is-black" target="_blank" href="{{ $php_web_server_url }}">
                     <span class="icon is-small">
@@ -86,15 +88,30 @@
             </p>
 
             <br>
+            <br>
             <p class="mb-2" class="has-text-black">
                 Cloud SQL instance with k6.io load test
-            </h2>
+            </p>
             <p>
                 <a class="button is-black" target="_blank" href="{{ $cloud_sql_url }}">
                     <span class="icon is-small">
                         <i class="fas fa-terminal" aria-hidden="true"></i>
                     </span>
                     <span>Deploy Cloud SQL + Load Test</span>
+                </a>
+            </p>
+
+            <br>
+            <br>
+            <p class="mb-2" class="has-text-black">
+                Cloud Composer with a sample ETL pipeline to move data from Cloud Storage to BigQuery
+            </p>
+            <p>
+                <a class="button is-black" target="_blank" href="{{ $cloud_composer_url }}">
+                    <span class="icon is-small">
+                        <i class="fas fa-terminal" aria-hidden="true"></i>
+                    </span>
+                    <span>Deploy Composer + BigQuery</span>
                 </a>
             </p>
             <br>

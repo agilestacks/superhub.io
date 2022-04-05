@@ -21,6 +21,7 @@ sandbox_gke_demo_app = "hub-gke-with-demo-app.md"
 sandbox_gke = "hub-just-gke.md"
 sandbox_php_web_server = "hub-php-web-server.md"
 sandbox_cloud_sql = "hub-cloud-sql-perftest.md"
+sandbox_cloud_composer = "hub-composer-demo-app.md"
 
 gcp_cloudshell_url = "https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell"
 
