@@ -8,17 +8,28 @@ This website is based on [hugo](https://gohugo.io/) framework for building websi
 
 ## Prepare
 
-One of way how to install `hugo` is just run command `brew install hugo`. For more details visit official hugo [site](https://gohugo.io/getting-started/installing/)
-To build or update resources, you also need PostCSS to create the final assets. By default npm installs tools under the directory where you run npm install:
+One of way how to install `hugo` is just run command:
 
-```bash
-npm install -D autoprefixer postcss-cli
+```shell
+brew install hugo
+```
+
+For more details visit official hugo [site](https://gohugo.io/getting-started/installing/)
+
+You also need to install some node based dependencies (bulma, postcss and autoprefixer) to create the final assets:
+
+```shell
+npm install
 ```
 
 ## Local development
 
-To run site locally just call command `make serve`
+To run site locally just call command:
+
+```shell
+hugo serve
+```
 
 ## Build and publish to github pages
 
-To build website and publish it to github pages call command `make publish`
+This is done via GitHub Actions.
