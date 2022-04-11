@@ -3,8 +3,11 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - master  # Set a branch to deploy
-  pull_request:
+      - master
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+      - 'package-lock.json'
 
 jobs:
   deploy:
