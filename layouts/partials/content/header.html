@@ -1,7 +1,5 @@
 {{ $title := .Param "title" }}
 {{ $description := .Param "description" }}
-{{ $wiki_url := .Param "wiki_url" }}
-{{ $git_repo_url := .Param "git_repo_url" }}
 {{ $logo := "images/logo.png" | absURL }}
 <header class="header">
     <div class="container ">
@@ -17,18 +15,14 @@
                     <p class="subtitle is-4">{{ $description }}</p>
                 </div>
                 <div class="buttons is-centered">
-                    <a href="{{ $git_repo_url }}" target="_blank" class="button">
+                {{ range $btn := .Param "headerButtons" }}
+                    <a href="{{ $btn.url }}" target="_blank" class="button">
                         <span class="icon">
-                            <i class="fab fa-github-square"></i>
+                            <i class="{{ $btn.icon }}"></i>
                         </span>
-                        <span>GitHub</span>
+                        <span>{{ $btn.title }}</span>
                     </a>
-                    <a href="{{ $wiki_url }}" target="_blank" class="button">
-                        <span class="icon">
-                            <i class="fas fa-book"></i>
-                        </span>
-                        <span>Hub CLI Wiki</span>
-                    </a>
+                {{ end }}
                 </div>
             </div>
         </div>

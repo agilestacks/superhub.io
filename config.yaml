@@ -1,0 +1,38 @@
+baseURL: https://superhub.io
+languageCode: en-us
+title: SuperHub
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
+params:
+  title: SuperHub® Automation Hub
+  brief: Hub CLI is stack packaging and deployment tool.
+  description: "Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability."
+
+  hub_version: v1.0.5
+
+  headerButtons:
+    - title: GitHub
+      url: https://github.com/agilestacks/hub
+      icon: "fab fa-github-square"
+    - title: Wiki
+      url: https://github.com/agilestacks/hub/wiki
+      icon: "fas fa-book"
+    - title: GCP Sandboxes
+      url: https://google.devops.delivery
+      icon: "fas fa-layer-group"
+
+  sandboxes_git_repo_url: https://github.com/agilestacks/google-stacks
+  sandbox_gke_anthos_demo_app: hub-anthos-with-demo-app.md
+  sandbox_gke_demo_app: hub-gke-with-demo-app.md
+  sandbox_gke: hub-just-gke.md
+  sandbox_php_web_server: hub-php-web-server.md
+  sandbox_cloud_sql: hub-cloud-sql-perftest.md
+  sandbox_cloud_composer: hub-composer-demo-app.md
+  gcp_cloudshell_url: https://ssh.cloud.google.com/cloudshell/editor?cloudshell_image=gcr.io/superhub/cloud-shell
