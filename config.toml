@@ -12,7 +12,7 @@ priority = 0.5
 wiki_url     = "https://github.com/agilestacks/hub/wiki"
 git_repo_url = "https://github.com/agilestacks/hub"
 
-hub_version = "v1.0.4"
+hub_version = "v1.0.5"
 
 sandboxes_git_repo_url = "https://github.com/agilestacks/google-stacks"
 
