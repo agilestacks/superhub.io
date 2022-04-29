@@ -25,5 +25,5 @@ params:
       url: https://github.com/agilestacks/hub/wiki
       icon: "fas fa-book"
     - title: GCP Sandboxes
-      url: https://google.devops.delivery
+      url: https://gcp.devops.delivery
       icon: "fas fa-layer-group"
