@@ -15,8 +15,6 @@ params:
   brief: Hub CLI is stack packaging and deployment tool.
   description: "Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability."
 
-  hub_version: v1.0.5
-
   headerButtons:
     - title: GitHub
       url: https://github.com/agilestacks/hub
