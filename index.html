@@ -6,111 +6,76 @@
 <span>GCP Sandboxes</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><p class="subtitle is-3">Installing Hub CLI on a local workstation (Mac, Windows, Linux)</p><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span>
 <span>MacOS</span></a></li><li id=linux><a><span class="icon is-small"><i class="fab fa-linux" aria-hidden=true></i></span>
 <span>Linux</span></a></li><li id=windows><a><span class="icon is-small"><i class="fab fa-windows" aria-hidden=true></i></span>
-<span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+<span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI from pre-build binary</span>
 <button class="button is-small" onclick='onCopy("macos-bash")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>
-curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.5/hub.darwin_amd64
-mv hub.darwin_amd64 hub
-chmod +x hub
-sudo mv hub /usr/local/bin
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hub /usr/local/bin
 hub extensions install
-hub extensions update
-</pre></div><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>Homebrew</span>
+</pre></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>Homebrew</span>
 <button class="button is-small" onclick='onCopy("macos-brew")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-brew></textarea><pre id=macos-brew-instruction class=my-1>brew tap agilestacks/brew
-brew install agilestacks/brew/hub</pre></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (MacOS)</span>
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-brew></textarea><pre id=macos-brew-instruction class=my-1>brew tap agilestacks/tap
+brew install agilestacks/tap/hub
+</pre></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (MacOS)</span>
 <button class="button is-small" onclick='onCopy("macos-tools")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
-<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>,</span>
-<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://git-scm.com/>git</a><span>,</span>
 <a target=_blank href=https://stedolan.github.io/jq/>jq</a><span>,</span>
 <a target=_blank href=https://mikefarah.gitbook.io/yq/>yq</a><span>,</span>
-<a target=_blank href=https://nodejs.org/>nodejs</a><span>,</span>
-<a target=_blank href=https://www.npmjs.com/get-npm>npm</a><span></span>
+<a target=_blank href=https://nodejs.org/>nodejs</a>
 <span>using the following commands:</span></p><textarea id=macos-tools></textarea><pre id=macos-tools-instruction class=my-1>brew update
-brew install awscli kubectl eksctl jq yq node
-
-aws configure</pre></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+brew install git jq yq node
+</pre><p class="instruction-header subtitle has-text-black"><span>You could also install optional tools.</span></p><p><span>Install</span>
+<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
+<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
+<a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
 <button class="button is-small" onclick='onCopy("linux-bash")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>
-curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.5/hub.linux_amd64
-mv hub.linux_amd64 hub
-chmod +x hub
-sudo mv hub /usr/local/bin
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hub /usr/local/bin
 hub extensions install
-hub extensions update
 </pre></div></div><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=ubuntu><a><span class="icon is-small"><i class="fab fa-ubuntu" aria-hidden=true></i></span>
 <span>Ubuntu</span></a></li><li id=centos><a><span class="icon is-small"><i class="fab fa-centos" aria-hidden=true></i></span>
 <span>CentOS</span></a></li></ul></div><div class=tabs-content><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
 <button class="button is-small" onclick='onCopy("linux-ubuntu")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
-<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>,</span>
-<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://git-scm.com/>git</a><span>,</span>
 <a target=_blank href=https://stedolan.github.io/jq/>jq</a><span>,</span>
 <a target=_blank href=https://mikefarah.gitbook.io/yq/>yq</a><span>,</span>
-<a target=_blank href=https://nodejs.org/>nodejs</a><span>,</span>
-<a target=_blank href=https://www.npmjs.com/get-npm>npm</a><span></span>
-<span>using the following commands:</span></p><textarea id=linux-ubuntu></textarea><pre id=linux-ubuntu-instruction class=my-1>sudo apt-get update
-sudo apt-get install awscli
-
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+<a target=_blank href=https://nodejs.org/>nodejs</a>
+<span>using the following commands:</span></p><textarea id=linux-ubuntu></textarea><pre id=linux-ubuntu-instruction class=my-1>sudo add-apt-repository ppa:rmescandon/yq
 sudo apt-get update
-sudo apt-get install -y kubectl
-
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-
-sudo apt-get install -y jq
-
-sudo add-apt-repository ppa:rmescandon/yq
-sudo apt-get install -y yq
-
-sudo apt-get install -y nodejs
-sudo apt install -y npm
-
-aws configure</pre></div><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Amazon Linux, CentOS)</span>
+sudo apt-get install -y git, jq, yq, nodejs
+</pre><p class="instruction-header subtitle has-text-black"><span>You could also install optional tools.</span></p><p><span>Install</span>
+<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
+<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
+<a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Amazon Linux, CentOS)</span>
 <button class="button is-small" onclick='onCopy("linux-centos")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
-<a target=_blank href=https://www.npmjs.com/get-npm>git</a><span>,</span>
-<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>,</span>
-<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://git-scm.com/>git</a><span>,</span>
 <a target=_blank href=https://stedolan.github.io/jq/>jq</a><span>,</span>
 <a target=_blank href=https://mikefarah.gitbook.io/yq/>yq</a><span>,</span>
-<a target=_blank href=https://nodejs.org/>nodejs</a><span>,</span>
-<a target=_blank href=https://www.npmjs.com/get-npm>npm</a><span></span>
-<span>using the following commands:</span></p><textarea id=linux-centos></textarea><pre id=linux-centos-instruction class=my-1>sudo yum install -y git python3-pip jq
+<a target=_blank href=https://nodejs.org/>nodejs</a>
+<span>using the following commands:</span></p><textarea id=linux-centos></textarea><pre id=linux-centos-instruction class=my-1>curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
+sudo yum install -y git jq nodejs
 
-sudo pip3 install awscli --upgrade
-
-curl -sLO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
-
-curl -sL "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_linux_amd64.tar.gz" | tar -xz
-sudo mv eksctl /usr/local/bin
-
-# to check the latest version follow
-# https://github.com/mikefarah/yq/releases/
-curl -sLO "https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64"
+curl -sLO "https://github.com/mikefarah/yq/releases/download/v4.25.2/yq_linux_amd64"
 chmod +x yq_linux_amd64
 sudo mv yq_linux_amd64 /usr/local/bin/yq
-
-curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
-sudo yum install -y nodejs
-
-aws configure</pre></div></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+</pre><p class="instruction-header subtitle has-text-black"><span>You could also install optional tools.</span></p><p><span>Install</span>
+<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
+<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
+<a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
 <button class="button is-small" onclick='onCopy("wsl-linux")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Run the following commands from WSL shell. To start WSL use "C:\Distros\Ubuntu1804\ubuntu1804.exe" or similar command.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>
-curl -L -O https://github.com/agilestacks/hub/releases/download/v1.0.5/hub.linux_amd64
-mv hub.linux_amd64 hub
-chmod +x hub
-sudo mv hub /usr/local/bin
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Run the following commands from</span>
+<a target=_blank href=https://docs.microsoft.com/en-us/windows/wsl/about>WSL</a>
+<span>shell.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hub /usr/local/bin
 hub extensions install
-hub extensions update
 </pre><p><br></p></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Windows)</span>
 <button class="button is-small" onclick='onCopy("wsl-linux-tools")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>WSL can be</span>
@@ -119,33 +84,18 @@ hub extensions update
 <a target=_blank href=https://www.thomasmaurer.ch/2019/08/how-to-install-wsl-2-on-windows-server>this
 blog</a>
 <span>for WSL installation.</span><br></span><span>The examples below are provided for Ubuntu Linux distribution.</span><br><br><p><span>Install</span>
-<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>,</span>
-<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://git-scm.com/>git</a><span>,</span>
 <a target=_blank href=https://stedolan.github.io/jq/>jq</a><span>,</span>
 <a target=_blank href=https://mikefarah.gitbook.io/yq/>yq</a><span>,</span>
-<a target=_blank href=https://nodejs.org/>nodejs</a><span>,</span>
-<a target=_blank href=https://www.npmjs.com/get-npm>npm</a><span></span>
-<span>using the following commands:</span></p></p><textarea id=wsl-linux-tools></textarea><pre id=wsl-linux-tools-instruction class=my-1>sudo apt-get update
-sudo apt-get install awscli
-
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+<a target=_blank href=https://nodejs.org/>nodejs</a>
+<span>using the following commands:</span></p></p><textarea id=wsl-linux-tools></textarea><pre id=wsl-linux-tools-instruction class=my-1>sudo add-apt-repository ppa:rmescandon/yq
 sudo apt-get update
-sudo apt-get install -y kubectl
-
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-
-sudo apt-get install -y jq
-
-sudo add-apt-repository ppa:rmescandon/yq
-sudo apt-get install -y yq
-
-sudo apt-get install -y nodejs
-sudo apt install -y npm
-
-aws configure</pre><p><span>For complete details please refer to documentation:</span>
-<a target=_blank href=https://docs.agilestacks.com/article/u6a9cq5yya-hub-cli-on-windows#windows_subsystem_for_linux>Hub CLI on Windows</a></p></div></div></section></div></div></div></main><footer class=footer><div class="content has-text-centered"><p><span>&copy; 2022</span>
+sudo apt-get install -y git, jq, yq, nodejs
+</pre><p class="instruction-header subtitle has-text-black"><span>You could also install optional tools.</span></p><p><span>Install</span>
+<a target=_blank href=https://aws.amazon.com/cli/>awscli</a><span>,</span>
+<a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
+<a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
+<a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></section></div></div></div></main><footer class=footer><div class="content has-text-centered"><p><span>&copy; 2022</span>
 <a href target=_blank class=link>EPAM Systems, Inc.</a>
 <span>All Rights Reserved</span></p></div></footer><script src=https://superhub.io/js/site.40e36f98f731b8110ff088db6180086fabd6b61bae499a29a2d861384e53beae.js integrity="sha256-QONvmPcxuBEP8IjbYYAIb6vWthuuSZopothhOE5Tvq4="></script></body></html>
