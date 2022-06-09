@@ -2,7 +2,7 @@
     <div class="columns is-desktop">
         <div class="column instruction">
             <p class="instruction-header subtitle has-text-black">
-                <span>How to install Hub CLI</span>
+                <span>How to install Hub CLI from pre-build binary</span>
                 <button class="button is-small" onclick="onCopy('macos-bash')">
                     <span class="icon">
                         <i class="fas fa-clipboard"></i>
@@ -12,6 +12,8 @@
             <textarea id="macos-bash"></textarea>
             <pre id="macos-bash-instruction" class="my-1">{{ partial "content/install/macos/macos-bash.html" . }}</pre>
         </div>
+    </div>
+    <div class="columns is-desktop">
         <div class="column instruction">
             <p class="instruction-header subtitle has-text-black">
                 <span>Homebrew</span>
@@ -35,10 +37,14 @@
                     </span>
                 </button>
             </p>
-            {{ partial "content/install/tools-info.html" . }}
+            {{ partial "content/install/required-tools-info.html" . }}
             <textarea id="macos-tools"></textarea>
             <pre id="macos-tools-instruction"
-                class="my-1">{{ partial "content/install/macos/tools-macos.html" . }}</pre>
+                class="my-1">{{ partial "content/install/macos/required-tools-macos.html" . }}</pre>
+            <p class="instruction-header subtitle has-text-black">
+                <span>You could also install optional tools.</span>
+            </p>
+            {{ partial "content/install/optional-tools-info.html" . }}
         </div>
     </div>
 </section>

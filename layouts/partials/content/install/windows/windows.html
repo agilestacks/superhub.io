@@ -9,7 +9,11 @@
                     </span>
                 </button>
             </p>
-            <p><span>Run the following commands from WSL shell. To start WSL use "C:\Distros\Ubuntu1804\ubuntu1804.exe" or similar command.</span></p>
+            <p>
+                <span>Run the following commands from </span>
+                <a target="_blank" href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL</a>
+                <span> shell.</span>
+            </p>
             <textarea id="wsl-linux"></textarea>
             <pre id="wsl-linux-instruction" class="my-1">{{ partial "content/install/linux/linux-bash.html" . }}</pre>
             <p><br></p>
@@ -27,24 +31,21 @@
             </p>
             <p>
                 <span>WSL can be</span>
-                <a target=_blank href=https://docs.microsoft.com/en-us/windows/wsl/install-win10>installed</a>
+                <a target="_blank" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">installed</a>
                 <span>from Microsoft Store. You can also follow </span>
-                <a target=_blank href=https://www.thomasmaurer.ch/2019/08/how-to-install-wsl-2-on-windows-server />this
+                <a target="_blank" href="https://www.thomasmaurer.ch/2019/08/how-to-install-wsl-2-on-windows-server" />this
                 blog</a>
                 <span> for WSL installation.</span><br></span>
                 <span>The examples below are provided for Ubuntu Linux distribution.</span><br><br>
-                {{ partial "content/install/tools-info.html" . }}
+                {{ partial "content/install/required-tools-info.html" . }}
             </p>
             <textarea id="wsl-linux-tools"></textarea>
             <pre id="wsl-linux-tools-instruction"
                 class="my-1">{{ partial "content/install/windows/tools-windows.html" . }}</pre>
-            <p>
-                <span>For complete details please refer to documentation: </span>
-                <a target="_blank"
-                    href="https://docs.agilestacks.com/article/u6a9cq5yya-hub-cli-on-windows#windows_subsystem_for_linux">
-                    Hub CLI on Windows
-                </a>
+            <p class="instruction-header subtitle has-text-black">
+                <span>You could also install optional tools.</span>
             </p>
+            {{ partial "content/install/optional-tools-info.html" . }}
         </div>
     </div>
 </section>

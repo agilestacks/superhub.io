@@ -44,9 +44,13 @@
                         </span>
                     </button>
                 </p>
-                {{ partial "content/install/tools-info.html" . }}
+                {{ partial "content/install/required-tools-info.html" . }}
                 <textarea id="linux-ubuntu"></textarea>
                 <pre id="linux-ubuntu-instruction" class="my-1">{{ partial "content/install/linux/tools-ubuntu.html" . }}</pre>
+                <p class="instruction-header subtitle has-text-black">
+                    <span>You could also install optional tools.</span>
+                </p>
+                {{ partial "content/install/optional-tools-info.html" . }}
             </div>
             <div class="tab-content">
                 <p class="instruction-header subtitle has-text-black">
@@ -60,6 +64,10 @@
                 {{ partial "content/install/linux/tools-info-centos.html" . }}
                 <textarea id="linux-centos"></textarea>
                 <pre id="linux-centos-instruction" class="my-1">{{ partial "content/install/linux/tools-centos.html" . }}</pre>
+                <p class="instruction-header subtitle has-text-black">
+                    <span>You could also install optional tools.</span>
+                </p>
+                {{ partial "content/install/optional-tools-info.html" . }}
             </div>
         </div>
     </div>

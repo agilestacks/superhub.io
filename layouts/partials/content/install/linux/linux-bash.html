@@ -1,7 +1,3 @@
-{{ $hub_version := .Param "hub_version" }}
-curl -L -O https://github.com/agilestacks/hub/releases/download/{{ $hub_version }}/hub.linux_amd64
-mv hub.linux_amd64 hub
-chmod +x hub
-sudo mv hub /usr/local/bin
+curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hub /usr/local/bin
 hub extensions install
-hub extensions update
