@@ -1,6 +1,6 @@
 baseURL: https://superhub.io
 languageCode: en-us
-title: SuperHub
+title: Hubctl
 disableKinds:
   - taxonomy
   - taxonomyTerm
@@ -11,16 +11,16 @@ sitemap:
   priority: 0.5
 
 params:
-  title: SuperHub® Automation Hub
-  brief: Hub CLI is stack packaging and deployment tool.
-  description: "Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability."
+  title: Hubctl
+  brief: Hubctl is stack packaging and deployment tool.
+  description: "Hubctl implements push button deployments from customizable GitOps templates. Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability."
 
   headerButtons:
     - title: GitHub
-      url: https://github.com/agilestacks/hub
+      url: https://github.com/epam/hubctl
       icon: "fab fa-github-square"
     - title: Wiki
-      url: https://github.com/agilestacks/hub/wiki
+      url: https://github.com/epam/hubctl/wiki
       icon: "fas fa-book"
     - title: GCP Sandboxes
       url: https://gcp.devops.delivery
