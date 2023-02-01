@@ -1,20 +1,20 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=description content="Hub CLI is stack packaging and deployment tool."><link rel=canonical content="https://superhub.io/"><meta name=generator content="Hugo 0.96.0"><title>SuperHub</title><link rel="shortcut icon" href=https://superhub.io/favicon.ico><link rel=stylesheet href=https://superhub.io/main.f03df980bc0a0ae08b2b9f932e11fdd41116a60ddfde485b979faf61ccc7c06d.css integrity="sha256-8D35gLwKCuCLK5+TLhH91BEWpg3f3khbl5+vYczHwG0="></head><body><header class=header><div class=container><div class="columns is-centered is-vcentered is-desktop"><div class="column is-one-third-desktop is-narrow"><figure class="image has-text-centered"><img class=logo src=https://superhub.io/images/logo.png></figure></div><div class="column container is-fluid"><div><p class="title is-2">SuperHub® Automation Hub</p><p class="subtitle is-4">Hub CLI implements push button deployments from customizable GitOps templates. Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability.</p></div><div class="buttons is-centered"><a href=https://github.com/agilestacks/hub target=_blank class=button><span class=icon><i class="fab fa-github-square"></i></span>
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=description content="Hubctl is stack packaging and deployment tool."><link rel=canonical content="https://superhub.io/"><meta name=generator content="Hugo 0.96.0"><title>Hubctl</title><link rel="shortcut icon" href=https://superhub.io/favicon.ico><link rel=stylesheet href=https://superhub.io/main.f03df980bc0a0ae08b2b9f932e11fdd41116a60ddfde485b979faf61ccc7c06d.css integrity="sha256-8D35gLwKCuCLK5+TLhH91BEWpg3f3khbl5+vYczHwG0="></head><body><header class=header><div class=container><div class="columns is-centered is-vcentered is-desktop"><div class="column is-one-third-desktop is-narrow"><figure class="image has-text-centered"><img class=logo src=https://superhub.io/images/logo.png></figure></div><div class="column container is-fluid"><div><p class="title is-2">Hubctl</p><p class="subtitle is-4">Hubctl implements push button deployments from customizable GitOps templates. Trust the complete Automation Hub delivering composable stacks with speed, security, and reliability.</p></div><div class="buttons is-centered"><a href=https://github.com/epam/hubctl target=_blank class=button><span class=icon><i class="fab fa-github-square"></i></span>
 <span>GitHub</span></a>
-<a href=https://github.com/agilestacks/hub/wiki target=_blank class=button><span class=icon><i class="fas fa-book"></i></span>
+<a href=https://github.com/epam/hubctl/wiki target=_blank class=button><span class=icon><i class="fas fa-book"></i></span>
 <span>Wiki</span></a>
 <a href=https://gcp.devops.delivery target=_blank class=button><span class=icon><i class="fas fa-layer-group"></i></span>
-<span>GCP Sandboxes</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><p class="subtitle is-3">Installing Hub CLI on a local workstation (Mac, Windows, Linux)</p><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span>
+<span>GCP Sandboxes</span></a></div></div></div></div></header><main class=main><div class="container is-fluid"><p class="subtitle is-3">Installing hubctl on a local workstation (Mac, Windows, Linux)</p><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=macos><a><span class="icon is-small"><i class="fab fa-apple" aria-hidden=true></i></span>
 <span>MacOS</span></a></li><li id=linux><a><span class="icon is-small"><i class="fab fa-linux" aria-hidden=true></i></span>
 <span>Linux</span></a></li><li id=windows><a><span class="icon is-small"><i class="fab fa-windows" aria-hidden=true></i></span>
-<span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI from pre-build binary</span>
+<span>Windows</span></a></li></ul></div><div class="box tabs-content"><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install hubctl from pre-build binary</span>
 <button class="button is-small" onclick='onCopy("macos-bash")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
-sudo mv /tmp/hub /usr/local/bin
-hub extensions install
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-bash></textarea><pre id=macos-bash-instruction class=my-1>curl -LJ "https://github.com/epam/hubctl/releases/latest/download/hubctl_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hubctl /usr/local/bin
+hubctl extensions install
 </pre></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>Homebrew</span>
 <button class="button is-small" onclick='onCopy("macos-brew")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-brew></textarea><pre id=macos-brew-instruction class=my-1>brew tap agilestacks/tap
-brew install agilestacks/tap/hub
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=macos-brew></textarea><pre id=macos-brew-instruction class=my-1>brew tap epam/tap
+brew install epam/tap/hubctl
 </pre></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (MacOS)</span>
 <button class="button is-small" onclick='onCopy("macos-tools")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Install</span>
@@ -29,11 +29,11 @@ brew install git jq yq node
 <a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
 <a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
 <a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install hubctl</span>
 <button class="button is-small" onclick='onCopy("linux-bash")'>
-<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
-sudo mv /tmp/hub /usr/local/bin
-hub extensions install
+<span class=icon><i class="fas fa-clipboard"></i></span></button></p><textarea id=linux-bash></textarea><pre id=linux-bash-instruction class=my-1>curl -LJ "https://github.com/epam/hubctl/releases/latest/download/hubctl_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hubctl /usr/local/bin
+hubctl extensions install
 </pre></div></div><div class=tabs-with-content><div class="tabs is-small is-toggle"><ul><li id=ubuntu><a><span class="icon is-small"><i class="fab fa-ubuntu" aria-hidden=true></i></span>
 <span>Ubuntu</span></a></li><li id=centos><a><span class="icon is-small"><i class="fab fa-centos" aria-hidden=true></i></span>
 <span>CentOS</span></a></li></ul></div><div class=tabs-content><div class=tab-content><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Ubuntu)</span>
@@ -69,13 +69,13 @@ sudo mv yq_linux_amd64 /usr/local/bin/yq
 <a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
 <a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
 <a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install Hub CLI</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></div></section><section class=tab-content><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install hubctl</span>
 <button class="button is-small" onclick='onCopy("wsl-linux")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>Run the following commands from</span>
 <a target=_blank href=https://docs.microsoft.com/en-us/windows/wsl/about>WSL</a>
-<span>shell.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>curl -LJ "https://github.com/agilestacks/hub/releases/latest/download/hub_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
-sudo mv /tmp/hub /usr/local/bin
-hub extensions install
+<span>shell.</span></p><textarea id=wsl-linux></textarea><pre id=wsl-linux-instruction class=my-1>curl -LJ "https://github.com/epam/hubctl/releases/latest/download/hubctl_$(uname -s)_$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/hubctl /usr/local/bin
+hubctl extensions install
 </pre><p><br></p></div></div><div class="columns is-desktop"><div class="column instruction"><p class="instruction-header subtitle has-text-black"><span>How to install required tools (Windows)</span>
 <button class="button is-small" onclick='onCopy("wsl-linux-tools")'>
 <span class=icon><i class="fas fa-clipboard"></i></span></button></p><p><span>WSL can be</span>
@@ -96,6 +96,6 @@ sudo apt-get install -y git, jq, yq, nodejs
 <a target=_blank href=https://eksctl.io/>eksctl</a><span>,</span>
 <a target=_blank href=https://cloud.google.com/sdk/docs/install>gcloud</a><span>,</span>
 <a target=_blank href=https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli>azure-cli</a><span>,</span>
-<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></section></div></div></div></main><footer class=footer><div class="content has-text-centered"><p><span>&copy; 2022</span>
+<a target=_blank href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>kubectl</a><span>.</span></p></div></div></section></div></div></div></main><footer class=footer><div class="content has-text-centered"><p><span>&copy; 2023</span>
 <a href target=_blank class=link>EPAM Systems, Inc.</a>
 <span>All Rights Reserved</span></p></div></footer><script src=https://superhub.io/js/site.40e36f98f731b8110ff088db6180086fabd6b61bae499a29a2d861384e53beae.js integrity="sha256-QONvmPcxuBEP8IjbYYAIb6vWthuuSZopothhOE5Tvq4="></script></body></html>
