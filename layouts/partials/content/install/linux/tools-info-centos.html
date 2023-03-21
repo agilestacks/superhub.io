@@ -6,14 +6,3 @@
     <a target="_blank" rel="noopener" href="https://nodejs.org/">nodejs</a>
     <span> using the following commands:</span>
 </p>
-<p class="subtitle is-3">Troubleshooting:</p>
-<p>
-    <span>
-        If you see error <code>'appstream': Cannot prepare internal mirrorlist</code><br>
-        Run following commands:<br>
-        <code>
-            sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*<br>
-            sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*<br>
-        </code>
-    </span>
-</p>
